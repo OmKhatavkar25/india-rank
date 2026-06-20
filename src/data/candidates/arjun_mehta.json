@@ -1,0 +1,50 @@
+{
+  "name": "Arjun Mehta",
+  "summary": "Senior Software Engineer with 9 years building distributed systems at scale at Uber and Stripe. Expert in Python, Go, and system architecture.",
+  "skills": [
+    "Python",
+    "Go",
+    "Kubernetes",
+    "Docker",
+    "AWS",
+    "PostgreSQL",
+    "Redis",
+    "Kafka",
+    "Microservices",
+    "System Design",
+    "gRPC"
+  ],
+  "total_experience_years": 9,
+  "seniority_level": "senior",
+  "education": [
+    "B.Tech Computer Science, IIT Bombay"
+  ],
+  "experience": [
+    {
+      "title": "Senior Software Engineer",
+      "company": "Stripe",
+      "duration_years": 4,
+      "description": "Built real-time payment processing pipeline handling $1B+ monthly volume. Designed fault-tolerant distributed system reducing p99 latency by 40%."
+    },
+    {
+      "title": "Software Engineer II",
+      "company": "Uber",
+      "duration_years": 3,
+      "description": "Developed ride-matching algorithms serving 1M+ daily requests. Led migration from monolith to microservices architecture."
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Flipkart",
+      "duration_years": 2,
+      "description": "Built scalable inventory management system. Optimized database queries reducing load times by 60%."
+    }
+  ],
+  "behavioral_signals": {
+    "open_source_contributions": 12,
+    "platform_activity_level": "high",
+    "leadership_experience": true,
+    "publications": 2,
+    "speaking_engagements": 4,
+    "collaboration_score": 0.85
+  }
+}

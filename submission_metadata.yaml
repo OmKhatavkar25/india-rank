@@ -1,0 +1,56 @@
+# Redrob Hackathon — Submission Metadata
+team_name: "team_rankai"
+
+primary_contact:
+  name: "Om Khatavkar"
+  email: "omkhatavkar7@gmail.com"
+  phone: "+91-XXXXXXXXXX"
+
+team_members:
+  - name: "Om Khatavkar"
+    email: "omkhatavkar7@gmail.com"
+    role: "ML Engineer"
+
+github_repo: "https://github.com/OmKhatavkar25/india-rank"
+
+sandbox_link: "https://huggingface.co/spaces/omkhatavkar/redrob-ranker"
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+compute:
+  platform: "Local Windows PC"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.11.4"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+ai_tools_used:
+  - "Claude"
+
+ai_usage_summary: |
+  Claude was used as a coding assistant only.
+  All ranking logic, feature extraction rules, scoring weights,
+  and architecture were designed and built manually by the human participant.
+
+methodology_summary: |
+  Rule-based ranker with explicit reasoning. Seven scoring components
+  (ML/AI experience, product company background, skill relevance,
+  career stability, experience years, behavioral signals, education/location)
+  weighted to match the Senior AI Engineer JD. The key insight is that the JD
+  explicitly warns against keyword counting — so the ranker evaluates career
+  history for actual ML/AI roles at product companies, detection of retrieval/
+  ranking/embedding experience in role descriptions, and penalizes consulting-only
+  backgrounds. Behavioral signals (response rate, recency, notice period) act
+  as a multiplier. Honeypot detection flags impossible skill/experience combos.
+  Runtime: ~12 seconds for 100K candidates on CPU.
+
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: false
+  reproduction_tested: true

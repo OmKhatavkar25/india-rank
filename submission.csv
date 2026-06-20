@@ -1,0 +1,101 @@
+candidate_id,rank,score,reasoning
+CAND_0081846,1,0.8799,6.6yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 6.7yrs exp (ideal range); response rate 73%; short notice
+CAND_0086022,2,0.8719,5.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 5.3yrs exp (ideal range); response rate 55%; short notice
+CAND_0006418,3,0.8683,5.6yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 5.7yrs exp (ideal range); response rate 92%; Gurgaon-based
+CAND_0099806,4,0.8678,4.5yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 4.6yrs exp; response rate 76%; short notice
+CAND_0064904,5,0.8665,4.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 7 relevant skills; 4.9yrs exp; response rate 78%; Hyderabad-based
+CAND_0045250,6,0.8644,6.5yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 6.6yrs exp (ideal range); response rate 74%; short notice; Delhi-based
+CAND_0068811,7,0.8608,7.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 7 relevant skills; 8.0yrs exp (ideal range); short notice; Pune-based
+CAND_0037566,8,0.8601,6.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 6.9yrs exp (ideal range); short notice; Bangalore-based
+CAND_0072660,9,0.8555,7.0yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 7.1yrs exp (ideal range); response rate 53%; active recently; short notice
+CAND_0071974,10,0.8524,7.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 8 relevant skills; 7.8yrs exp (ideal range); response rate 76%
+CAND_0030031,11,0.8518,3.3yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 5.7yrs exp (ideal range); response rate 94%; active recently; short notice
+CAND_0062247,12,0.8514,7.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 7.3yrs exp (ideal range); response rate 78%; short notice
+CAND_0027691,13,0.8488,6.3yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 6.5yrs exp (ideal range); response rate 68%; short notice; Pune-based
+CAND_0076163,14,0.8460,6.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 6.9yrs exp (ideal range); response rate 84%
+CAND_0011162,15,0.8444,5.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 10 relevant skills; 5.8yrs exp (ideal range); response rate 75%
+CAND_0052682,16,0.8441,6.5yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 6.6yrs exp (ideal range); response rate 88%; short notice
+CAND_0081053,17,0.8427,5.3yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 5.4yrs exp (ideal range); response rate 83%
+CAND_0011687,18,0.8425,7.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 7.8yrs exp (ideal range); response rate 89%; short notice
+CAND_0013536,19,0.8425,4.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 8 relevant skills; 14.1yrs exp; response rate 87%
+CAND_0042506,20,0.8422,4.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 4.2yrs exp; active recently; short notice; Mumbai-based
+CAND_0050454,21,0.8422,6.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 6.8yrs exp (ideal range); response rate 77%; short notice; Delhi-based
+CAND_0010541,22,0.8417,6.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 6.2yrs exp (ideal range); response rate 59%; Hyderabad-based
+CAND_0074225,23,0.8413,4.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 4.3yrs exp; response rate 91%
+CAND_0046064,24,0.8394,8.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 8.9yrs exp (ideal range); response rate 78%; short notice
+CAND_0015578,25,0.8393,5.3yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.4yrs exp (ideal range); response rate 65%; Delhi-based
+CAND_0077337,26,0.8391,6.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 7.0yrs exp (ideal range); response rate 95%; active recently
+CAND_0094056,27,0.8390,5.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.9yrs exp (ideal range); response rate 82%
+CAND_0020991,28,0.8386,4.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 4.9yrs exp; response rate 88%; active recently
+CAND_0079387,29,0.8356,6.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 6.9yrs exp (ideal range); response rate 81%; short notice
+CAND_0036437,30,0.8353,4.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 4.8yrs exp; response rate 87%; short notice
+CAND_0041669,31,0.8347,7.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 7 relevant skills; 8.0yrs exp (ideal range); response rate 77%; Noida-based
+CAND_0065195,32,0.8305,4.0yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.1yrs exp (ideal range); response rate 80%; active recently
+CAND_0080766,33,0.8304,8.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 7 relevant skills; 8.8yrs exp (ideal range); response rate 66%; short notice
+CAND_0061655,34,0.8302,4.5yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 4.6yrs exp; response rate 88%; short notice
+CAND_0052328,35,0.8301,4.3yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 6.5yrs exp (ideal range); response rate 79%; short notice; Pune-based
+CAND_0042029,36,0.8297,3.5yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 6.5yrs exp (ideal range); response rate 67%; Delhi-based
+CAND_0096142,37,0.8296,5.0yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.0yrs exp (ideal range); response rate 84%; Hyderabad-based
+CAND_0028793,38,0.8279,3.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 7.2yrs exp (ideal range); response rate 57%
+CAND_0068351,39,0.8274,6.3yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 6.4yrs exp (ideal range); response rate 86%; short notice; Delhi-based
+CAND_0033861,40,0.8252,7.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 8 relevant skills; 8.0yrs exp (ideal range); short notice
+CAND_0047721,41,0.8250,3.0yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 7.0yrs exp (ideal range)
+CAND_0055905,42,0.8242,8.0yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 8.1yrs exp (ideal range); response rate 87%; short notice
+CAND_0051004,43,0.8241,2.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 4.7yrs exp; short notice; Delhi-based
+CAND_0068932,44,0.8235,5.1yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 5.2yrs exp (ideal range); response rate 82%; active recently; short notice; Noida-based
+CAND_0083852,45,0.8210,5.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 6.0yrs exp (ideal range); response rate 85%; active recently
+CAND_0050876,46,0.8209,5.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 6.0yrs exp (ideal range); response rate 67%; active recently
+CAND_0048558,47,0.8205,6.6yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 6.7yrs exp (ideal range); response rate 80%; active recently; short notice; Noida-based
+CAND_0011432,48,0.8203,5.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 7.6yrs exp (ideal range); response rate 67%
+CAND_0016163,49,0.8198,6.6yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 6.7yrs exp (ideal range); response rate 72%; Gurgaon-based
+CAND_0069905,50,0.8196,6.5yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 6.6yrs exp (ideal range); response rate 78%
+CAND_0035879,51,0.8188,4.5yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 4.5yrs exp; response rate 82%; active recently; Noida-based
+CAND_0016659,52,0.8187,4.3yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 4.4yrs exp; response rate 89%; active recently
+CAND_0018549,53,0.8184,6.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 6.8yrs exp (ideal range); response rate 73%
+CAND_0002025,54,0.8180,5.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 5.9yrs exp (ideal range); response rate 80%; active recently; short notice
+CAND_0043860,55,0.8179,4.0yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 2 relevant skills; 6.1yrs exp (ideal range); response rate 81%; active recently; short notice
+CAND_0088025,56,0.8177,8.5yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 8.6yrs exp (ideal range); response rate 83%
+CAND_0037980,57,0.8160,8.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 2 relevant skills; 9.0yrs exp (ideal range); response rate 63%; short notice
+CAND_0012957,58,0.8153,4.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 4.9yrs exp; response rate 67%
+CAND_0091909,59,0.8153,6.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 6.9yrs exp (ideal range); response rate 65%; Bangalore-based
+CAND_0024466,60,0.8149,5.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.2yrs exp (ideal range); active recently
+CAND_0066999,61,0.8135,4.1yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.9yrs exp (ideal range); response rate 63%; short notice; Delhi-based
+CAND_0093547,62,0.8133,6.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 2.9yrs exp; response rate 75%
+CAND_0010603,63,0.8131,5.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 5.3yrs exp (ideal range); response rate 94%; active recently; Bangalore-based
+CAND_0020877,64,0.8125,3.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 7 relevant skills; 5.1yrs exp (ideal range); response rate 66%; Gurgaon-based
+CAND_0024620,65,0.8121,5.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.9yrs exp (ideal range)
+CAND_0018499,66,0.8104,7.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 7.2yrs exp (ideal range); response rate 61%; short notice; Noida-based
+CAND_0086151,67,0.8091,7.6yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 7.7yrs exp (ideal range); response rate 52%
+CAND_0039838,68,0.8082,4.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 7 relevant skills; 4.9yrs exp; response rate 80%
+CAND_0061175,69,0.8059,6.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 6.7yrs exp (ideal range); Gurgaon-based
+CAND_0006557,70,0.8044,7.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 8 relevant skills; 7.9yrs exp (ideal range); response rate 63%
+CAND_0007411,71,0.8042,7.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 8.0yrs exp (ideal range); inactive 200d; short notice
+CAND_0017960,72,0.8041,7.6yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 7.7yrs exp (ideal range); response rate 72%; Bangalore-based
+CAND_0061257,73,0.8024,7.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 2 relevant skills; 8.0yrs exp (ideal range); response rate 87%; short notice; Noida-based
+CAND_0024147,74,0.8019,5.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 5.9yrs exp (ideal range); response rate 84%
+CAND_0041568,75,0.8019,3.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 5.2yrs exp (ideal range); response rate 52%
+CAND_0099269,76,0.8019,5.4yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.5yrs exp (ideal range); active recently; Noida-based
+CAND_0051292,77,0.8009,5.0yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.2yrs exp (ideal range); response rate 52%; short notice
+CAND_0092706,78,0.8006,5.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5.8yrs exp (ideal range); response rate 78%; active recently; Delhi-based
+CAND_0010257,79,0.7993,1.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 6.5yrs exp (ideal range); response rate 72%; Noida-based
+CAND_0057563,80,0.7981,4.5yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 6.8yrs exp (ideal range); response rate 83%
+CAND_0006567,81,0.7979,7.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 7.9yrs exp (ideal range); response rate 79%; Noida-based
+CAND_0039754,82,0.7977,8.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 16.2yrs exp; response rate 81%; short notice
+CAND_0027801,83,0.7964,7.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 7.4yrs exp (ideal range); response rate 65%; Hyderabad-based
+CAND_0084819,84,0.7945,2.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 4.5yrs exp; response rate 74%
+CAND_0043228,85,0.7944,6.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 6.8yrs exp (ideal range); active recently; short notice
+CAND_0060072,86,0.7944,5.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.7yrs exp (ideal range)
+CAND_0039383,87,0.7941,7.0yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 7.1yrs exp (ideal range); response rate 61%; Gurgaon-based
+CAND_0064270,88,0.7930,4.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 4.2yrs exp; response rate 82%; Pune-based
+CAND_0070485,89,0.7928,6.3yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 6.4yrs exp (ideal range)
+CAND_0083307,90,0.7926,7.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 7 relevant skills; 7.8yrs exp (ideal range); response rate 70%
+CAND_0099751,91,0.7926,5.4yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 5.5yrs exp (ideal range); response rate 64%
+CAND_0009024,92,0.7925,5.1yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 5.2yrs exp (ideal range); short notice
+CAND_0008618,93,0.7924,4.6yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 4.7yrs exp; Gurgaon-based
+CAND_0087364,94,0.7922,4.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 4.9yrs exp; short notice; Gurgaon-based
+CAND_0032515,95,0.7911,5.0yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.1yrs exp (ideal range); response rate 54%
+CAND_0007596,96,0.7910,4.3yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 4.4yrs exp; response rate 86%; active recently; Delhi-based
+CAND_0049538,97,0.7905,5.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 5.8yrs exp (ideal range); response rate 72%; active recently; short notice
+CAND_0048469,98,0.7903,3.6yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 4.7yrs exp; response rate 59%; Delhi-based
+CAND_0067322,99,0.7889,4.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 4.3yrs exp
+CAND_0076251,100,0.7877,4.1yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 7.6yrs exp (ideal range); response rate 51%

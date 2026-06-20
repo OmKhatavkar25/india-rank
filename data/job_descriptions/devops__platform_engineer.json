@@ -1,0 +1,4 @@
+{
+  "title": "DevOps / Platform Engineer",
+  "description": "We are scaling our infrastructure and need a Platform Engineer to build the foundation our engineering team relies on. You will own our CI/CD pipelines, cloud infrastructure, and developer experience. Key Responsibilities: Design and maintain CI/CD pipelines. Manage and optimize Kubernetes clusters. Build internal developer platform and tooling. Implement infrastructure as code. Monitor system reliability and performance. Automate operational workflows. Requirements: 4+ years of infrastructure/platform engineering. Strong knowledge of Kubernetes and Docker. Experience with infrastructure as code (Terraform). Deep AWS or GCP knowledge. Scripting skills (Python, Bash). Experience with monitoring and observability tools. Understanding of networking concepts. Nice to Have: Experience at scale (100+ microservices). Contributions to CNCF projects. SRE experience. Security background."
+}

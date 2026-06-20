@@ -1,0 +1,43 @@
+{
+  "name": "Amit Kumar",
+  "summary": "Recent CS graduate passionate about full-stack development. Built several side projects and active open source contributor.",
+  "skills": [
+    "JavaScript",
+    "React",
+    "Node.js",
+    "Python",
+    "MongoDB",
+    "Express",
+    "CSS",
+    "HTML",
+    "Git",
+    "REST APIs"
+  ],
+  "total_experience_years": 1,
+  "seniority_level": "junior",
+  "education": [
+    "B.Tech Computer Science, SRM University"
+  ],
+  "experience": [
+    {
+      "title": "Software Engineer Intern",
+      "company": "Tech Mahindra",
+      "duration_years": 0.5,
+      "description": "Built internal dashboard for project management using React and Node.js."
+    },
+    {
+      "title": "Freelance Developer",
+      "company": "Self-employed",
+      "duration_years": 0.5,
+      "description": "Developed websites for 3 small businesses. Built e-commerce platform using MERN stack."
+    }
+  ],
+  "behavioral_signals": {
+    "open_source_contributions": 15,
+    "platform_activity_level": "high",
+    "leadership_experience": false,
+    "publications": 0,
+    "speaking_engagements": 0,
+    "collaboration_score": 0.6
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Ananya Patel",
+  "summary": "Data Scientist with PhD in ML. 4 years building recommendation systems and predictive models at Spotify and McKinsey.",
+  "skills": [
+    "Python",
+    "R",
+    "TensorFlow",
+    "PyTorch",
+    "Spark",
+    "SQL",
+    "Pandas",
+    "NumPy",
+    "Scikit-learn",
+    "Airflow",
+    "A/B Testing"
+  ],
+  "total_experience_years": 4,
+  "seniority_level": "senior",
+  "education": [
+    "PhD Machine Learning, CMU",
+    "M.Sc. Statistics, ISI Kolkata"
+  ],
+  "experience": [
+    {
+      "title": "Data Scientist",
+      "company": "Spotify",
+      "duration_years": 2.5,
+      "description": "Built personalization algorithms for Discover Weekly playlists. Improved user engagement by 12% through ML-driven recommendation models."
+    },
+    {
+      "title": "Data Science Consultant",
+      "company": "McKinsey & Company",
+      "duration_years": 1.5,
+      "description": "Led data science engagements for Fortune 500 clients. Built predictive models for supply chain optimization."
+    }
+  ],
+  "behavioral_signals": {
+    "open_source_contributions": 3,
+    "platform_activity_level": "medium",
+    "leadership_experience": false,
+    "publications": 5,
+    "speaking_engagements": 3,
+    "collaboration_score": 0.72
+  }
+}

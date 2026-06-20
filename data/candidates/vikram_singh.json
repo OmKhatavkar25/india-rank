@@ -1,0 +1,50 @@
+{
+  "name": "Vikram Singh",
+  "summary": "Product Manager with 7 years experience leading B2B SaaS products. Background in computer science and MBA.",
+  "skills": [
+    "Product Management",
+    "Agile",
+    "Scrum",
+    "SQL",
+    "Analytics",
+    "A/B Testing",
+    "Python",
+    "JIRA",
+    "Figma",
+    "User Research"
+  ],
+  "total_experience_years": 7,
+  "seniority_level": "manager",
+  "education": [
+    "MBA, ISB Hyderabad",
+    "B.Tech Computer Science, DTU"
+  ],
+  "experience": [
+    {
+      "title": "Senior Product Manager",
+      "company": "Atlassian",
+      "duration_years": 3,
+      "description": "Led product strategy for Jira Cloud. Drove 30% revenue growth through new feature launches and user segmentation."
+    },
+    {
+      "title": "Product Manager",
+      "company": "Freshworks",
+      "duration_years": 2.5,
+      "description": "Built customer support product from 0 to 500+ customers. Defined roadmap and managed cross-functional team."
+    },
+    {
+      "title": "Associate Product Manager",
+      "company": "Microsoft",
+      "duration_years": 1.5,
+      "description": "Worked on Azure DevOps product team. Conducted user research and shipped 15+ features."
+    }
+  ],
+  "behavioral_signals": {
+    "open_source_contributions": 0,
+    "platform_activity_level": "medium",
+    "leadership_experience": true,
+    "publications": 1,
+    "speaking_engagements": 5,
+    "collaboration_score": 0.9
+  }
+}

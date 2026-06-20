@@ -1,0 +1,51 @@
+{
+  "name": "Priya Sharma",
+  "summary": "Full-stack engineer turned ML specialist. 6 years experience building AI products at Microsoft and a YC startup.",
+  "skills": [
+    "Python",
+    "TypeScript",
+    "React",
+    "TensorFlow",
+    "PyTorch",
+    "Azure",
+    "Docker",
+    "NLP",
+    "LLM",
+    "FastAPI",
+    "PostgreSQL"
+  ],
+  "total_experience_years": 6,
+  "seniority_level": "senior",
+  "education": [
+    "M.S. Computer Science, Stanford",
+    "B.Tech CSE, IIT Delhi"
+  ],
+  "experience": [
+    {
+      "title": "Machine Learning Engineer",
+      "company": "Microsoft",
+      "duration_years": 3,
+      "description": "Developed NLP models for Azure Cognitive Services. Fine-tuned transformer models achieving state-of-the-art on internal benchmarks."
+    },
+    {
+      "title": "Full Stack Engineer",
+      "company": "YC Startup (RapidAI)",
+      "duration_years": 2,
+      "description": "Built ML-powered document processing platform from scratch. Led team of 4 engineers."
+    },
+    {
+      "title": "Software Engineer Intern",
+      "company": "Google",
+      "duration_years": 1,
+      "description": "Worked on internal developer tools team. Built CLI tool for automated deployment pipelines."
+    }
+  ],
+  "behavioral_signals": {
+    "open_source_contributions": 8,
+    "platform_activity_level": "high",
+    "leadership_experience": true,
+    "publications": 3,
+    "speaking_engagements": 2,
+    "collaboration_score": 0.78
+  }
+}

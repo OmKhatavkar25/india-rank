@@ -1,0 +1,44 @@
+{
+  "name": "Sneha Reddy",
+  "summary": "ML Engineer focused on computer vision and edge AI. 3 years building production ML systems at Tesla and NVIDIA.",
+  "skills": [
+    "Python",
+    "C++",
+    "TensorFlow",
+    "PyTorch",
+    "Computer Vision",
+    "ONNX",
+    "CUDA",
+    "Docker",
+    "MLOps",
+    "AWS"
+  ],
+  "total_experience_years": 3,
+  "seniority_level": "mid",
+  "education": [
+    "M.S. Robotics, University of Michigan",
+    "B.Tech ECE, IIIT Hyderabad"
+  ],
+  "experience": [
+    {
+      "title": "ML Engineer",
+      "company": "Tesla",
+      "duration_years": 2,
+      "description": "Developed computer vision models for Autopilot perception stack. Optimized inference pipeline achieving 2x speedup on embedded hardware."
+    },
+    {
+      "title": "AI Engineer",
+      "company": "NVIDIA",
+      "duration_years": 1,
+      "description": "Built edge AI deployment toolkit for Jetson platform. Reduced model deployment time by 60%."
+    }
+  ],
+  "behavioral_signals": {
+    "open_source_contributions": 4,
+    "platform_activity_level": "medium",
+    "leadership_experience": false,
+    "publications": 2,
+    "speaking_engagements": 1,
+    "collaboration_score": 0.68
+  }
+}

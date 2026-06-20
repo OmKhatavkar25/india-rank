@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "candidate-ranker"
+version = "1.0.0"
+description = "AI-powered candidate ranking system that understands who truly fits a role — beyond keyword matching"
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [
+    {name = "Candidate Ranker Team"},
+]
+keywords = ["ai", "recruitment", "hiring", "nlp", "embeddings", "ranking"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Human Resources",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    "sentence-transformers>=2.2.0",
+    "numpy>=1.21.0",
+    "pydantic>=2.0.0",
+    "pyyaml>=6.0",
+    "rich>=13.0.0",
+    "click>=8.0.0",
+    "pandas>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "pytest-benchmark>=4.0",
+    "mypy>=1.0",
+    "ruff>=0.1.0",
+    "pre-commit>=3.0",
+]
+api = [
+    "fastapi>=0.100.0",
+    "uvicorn[standard]>=0.20.0",
+]
+
+[project.scripts]
+candidate-ranker = "candidate_ranker.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --cov=src/candidate_ranker --cov-report=term-missing"
+
+[tool.mypy]
+strict = true
+python_version = "3.11"
+ignore_missing_imports = true
+disallow_untyped_defs = true
+disallow_any_unimported = false
+
+[tool.ruff]
+target-version = "py311"
+line-length = 120
+select = ["E", "F", "I", "N", "W", "UP", "ANN"]
+ignore = ["ANN101", "ANN102"]
+fix = true
+
+[tool.coverage.run]
+source = ["src/candidate_ranker"]
+omit = ["**/__pycache__/**", "**/tests/**"]

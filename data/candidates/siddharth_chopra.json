@@ -1,0 +1,49 @@
+{
+  "name": "Siddharth Chopra",
+  "summary": "Solutions architect with 15 years designing enterprise systems. Deep expertise in cloud migrations and system modernization.",
+  "skills": [
+    "AWS",
+    "Azure",
+    "GCP",
+    "Terraform",
+    "Java",
+    ".NET",
+    "Python",
+    "Kubernetes",
+    "Microservices",
+    "Enterprise Architecture"
+  ],
+  "total_experience_years": 15,
+  "seniority_level": "principal",
+  "education": [
+    "B.E. Computer Science, Thapar University"
+  ],
+  "experience": [
+    {
+      "title": "Principal Solutions Architect",
+      "company": "AWS",
+      "duration_years": 5,
+      "description": "Led cloud migration strategy for Fortune 100 clients. Designed multi-region architectures handling 10M+ users."
+    },
+    {
+      "title": "Enterprise Architect",
+      "company": "IBM",
+      "duration_years": 6,
+      "description": "Designed enterprise systems for banking and telecom clients. Led modernization of legacy monoliths to microservices."
+    },
+    {
+      "title": "Senior Software Engineer",
+      "company": "Dell",
+      "duration_years": 4,
+      "description": "Developed enterprise management software. Built distributed monitoring system."
+    }
+  ],
+  "behavioral_signals": {
+    "open_source_contributions": 0,
+    "platform_activity_level": "low",
+    "leadership_experience": true,
+    "publications": 1,
+    "speaking_engagements": 8,
+    "collaboration_score": 0.88
+  }
+}

@@ -1,0 +1,29 @@
+# config/default.yaml
+# Candidate Ranker — default configuration
+
+embedding:
+  model_name: "all-MiniLM-L6-v2"
+  normalize_embeddings: true
+  cache_dir: null  # uses huggingface default cache
+
+scoring:
+  weights:
+    semantic_similarity: 0.35
+    skill_match: 0.25
+    experience_relevance: 0.20
+    role_title_relevance: 0.10
+    behavioral_signals: 0.10
+
+pipeline:
+  top_n: 20
+  min_score_threshold: 0.0  # 0.0 = no filter
+
+logging:
+  level: "INFO"
+  format: "%(asctime)s | %(levelname)-8s | %(name)s | %(message)s"
+  file: null  # null = stdout only
+
+export:
+  default_format: "csv"  # csv | json | both
+  include_strengths: true
+  include_concerns: true

@@ -1,0 +1,49 @@
+{
+  "name": "Karan Malhotra",
+  "summary": "Engineering Manager with 12 years experience leading high-performing teams at Google and Meta.",
+  "skills": [
+    "Python",
+    "Java",
+    "Distributed Systems",
+    "Leadership",
+    "Agile",
+    "System Design",
+    "Kubernetes",
+    "AWS",
+    "Project Management"
+  ],
+  "total_experience_years": 12,
+  "seniority_level": "manager",
+  "education": [
+    "B.Tech Computer Science, IIT Delhi",
+    "MBA, Harvard Business School"
+  ],
+  "experience": [
+    {
+      "title": "Engineering Manager",
+      "company": "Google",
+      "duration_years": 5,
+      "description": "Led 15-person engineering team building Google Cloud infrastructure. Drove key initiatives reducing infrastructure costs by 25%."
+    },
+    {
+      "title": "Senior Software Engineer",
+      "company": "Meta",
+      "duration_years": 4,
+      "description": "Built real-time content moderation platform serving 2B+ users. Mentored 10+ junior engineers."
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Amazon",
+      "duration_years": 3,
+      "description": "Developed recommendation engine for Amazon Prime Video. Improved user retention by 15%."
+    }
+  ],
+  "behavioral_signals": {
+    "open_source_contributions": 1,
+    "platform_activity_level": "medium",
+    "leadership_experience": true,
+    "publications": 0,
+    "speaking_engagements": 6,
+    "collaboration_score": 0.92
+  }
+}

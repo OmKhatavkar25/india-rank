@@ -1,0 +1,49 @@
+{
+  "name": "Deepika Nair",
+  "summary": "Data engineer building large-scale data pipelines. 6 years experience with Spark, Airflow, and cloud data warehouses.",
+  "skills": [
+    "Python",
+    "Spark",
+    "Airflow",
+    "SQL",
+    "AWS",
+    "Snowflake",
+    "dbt",
+    "Kafka",
+    "Docker",
+    "Terraform"
+  ],
+  "total_experience_years": 6,
+  "seniority_level": "senior",
+  "education": [
+    "B.Tech Computer Science, PEC Chandigarh"
+  ],
+  "experience": [
+    {
+      "title": "Senior Data Engineer",
+      "company": "Swiggy",
+      "duration_years": 3,
+      "description": "Built real-time data pipeline processing 500K events/second. Reduced data latency from 1 hour to 5 minutes."
+    },
+    {
+      "title": "Data Engineer",
+      "company": "Myntra",
+      "duration_years": 2,
+      "description": "Designed data warehouse architecture for analytics team. Built ETL pipelines serving 50+ dashboards."
+    },
+    {
+      "title": "Software Engineer",
+      "company": "Cisco",
+      "duration_years": 1,
+      "description": "Developed network monitoring tools. Built data aggregation pipeline for network metrics."
+    }
+  ],
+  "behavioral_signals": {
+    "open_source_contributions": 3,
+    "platform_activity_level": "medium",
+    "leadership_experience": false,
+    "publications": 0,
+    "speaking_engagements": 1,
+    "collaboration_score": 0.75
+  }
+}

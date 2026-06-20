@@ -1,0 +1,49 @@
+{
+  "name": "Neha Gupta",
+  "summary": "Frontend engineer specializing in React and TypeScript. 5 years building consumer web applications at high growth startups.",
+  "skills": [
+    "React",
+    "TypeScript",
+    "JavaScript",
+    "Next.js",
+    "CSS",
+    "GraphQL",
+    "Jest",
+    "Cypress",
+    "Figma",
+    "Node.js"
+  ],
+  "total_experience_years": 5,
+  "seniority_level": "mid",
+  "education": [
+    "B.Tech Computer Science, BITS Pilani"
+  ],
+  "experience": [
+    {
+      "title": "Senior Frontend Engineer",
+      "company": "Razorpay",
+      "duration_years": 2,
+      "description": "Built payment checkout experience used by 10M+ users. Improved conversion rate by 20% through UI/UX optimization."
+    },
+    {
+      "title": "Frontend Engineer",
+      "company": "CRED",
+      "duration_years": 2,
+      "description": "Developed credit card management platform. Built real-time notification system using WebSockets."
+    },
+    {
+      "title": "Software Engineer",
+      "company": "HackerRank",
+      "duration_years": 1,
+      "description": "Built interactive coding assessment platform. Improved test efficiency through parallel execution."
+    }
+  ],
+  "behavioral_signals": {
+    "open_source_contributions": 6,
+    "platform_activity_level": "high",
+    "leadership_experience": false,
+    "publications": 0,
+    "speaking_engagements": 2,
+    "collaboration_score": 0.8
+  }
+}
