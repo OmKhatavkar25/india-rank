@@ -1,101 +1,101 @@
 candidate_id,rank,score,reasoning
-CAND_0081846,1,0.8799,6.6yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 6.7yrs exp (ideal range); response rate 73%; short notice
-CAND_0086022,2,0.8719,5.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 5.3yrs exp (ideal range); response rate 55%; short notice
-CAND_0006418,3,0.8683,5.6yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 5.7yrs exp (ideal range); response rate 92%; Gurgaon-based
-CAND_0099806,4,0.8678,4.5yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 4.6yrs exp; response rate 76%; short notice
-CAND_0064904,5,0.8665,4.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 7 relevant skills; 4.9yrs exp; response rate 78%; Hyderabad-based
-CAND_0045250,6,0.8644,6.5yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 6.6yrs exp (ideal range); response rate 74%; short notice; Delhi-based
-CAND_0068811,7,0.8608,7.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 7 relevant skills; 8.0yrs exp (ideal range); short notice; Pune-based
-CAND_0037566,8,0.8601,6.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 6.9yrs exp (ideal range); short notice; Bangalore-based
-CAND_0072660,9,0.8555,7.0yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 7.1yrs exp (ideal range); response rate 53%; active recently; short notice
-CAND_0071974,10,0.8524,7.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 8 relevant skills; 7.8yrs exp (ideal range); response rate 76%
-CAND_0030031,11,0.8518,3.3yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 5.7yrs exp (ideal range); response rate 94%; active recently; short notice
-CAND_0062247,12,0.8514,7.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 7.3yrs exp (ideal range); response rate 78%; short notice
-CAND_0027691,13,0.8488,6.3yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 6.5yrs exp (ideal range); response rate 68%; short notice; Pune-based
-CAND_0076163,14,0.8460,6.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 6.9yrs exp (ideal range); response rate 84%
-CAND_0011162,15,0.8444,5.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 10 relevant skills; 5.8yrs exp (ideal range); response rate 75%
-CAND_0052682,16,0.8441,6.5yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 6.6yrs exp (ideal range); response rate 88%; short notice
-CAND_0081053,17,0.8427,5.3yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 5.4yrs exp (ideal range); response rate 83%
-CAND_0011687,18,0.8425,7.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 7.8yrs exp (ideal range); response rate 89%; short notice
-CAND_0013536,19,0.8425,4.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 8 relevant skills; 14.1yrs exp; response rate 87%
-CAND_0042506,20,0.8422,4.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 4.2yrs exp; active recently; short notice; Mumbai-based
-CAND_0050454,21,0.8422,6.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 6.8yrs exp (ideal range); response rate 77%; short notice; Delhi-based
-CAND_0010541,22,0.8417,6.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 6.2yrs exp (ideal range); response rate 59%; Hyderabad-based
-CAND_0074225,23,0.8413,4.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 4.3yrs exp; response rate 91%
-CAND_0046064,24,0.8394,8.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 8.9yrs exp (ideal range); response rate 78%; short notice
-CAND_0015578,25,0.8393,5.3yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.4yrs exp (ideal range); response rate 65%; Delhi-based
-CAND_0077337,26,0.8391,6.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 7.0yrs exp (ideal range); response rate 95%; active recently
-CAND_0094056,27,0.8390,5.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.9yrs exp (ideal range); response rate 82%
-CAND_0020991,28,0.8386,4.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 4.9yrs exp; response rate 88%; active recently
-CAND_0079387,29,0.8356,6.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 6.9yrs exp (ideal range); response rate 81%; short notice
-CAND_0036437,30,0.8353,4.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 4.8yrs exp; response rate 87%; short notice
-CAND_0041669,31,0.8347,7.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 7 relevant skills; 8.0yrs exp (ideal range); response rate 77%; Noida-based
-CAND_0065195,32,0.8305,4.0yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.1yrs exp (ideal range); response rate 80%; active recently
-CAND_0080766,33,0.8304,8.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 7 relevant skills; 8.8yrs exp (ideal range); response rate 66%; short notice
-CAND_0061655,34,0.8302,4.5yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 4.6yrs exp; response rate 88%; short notice
-CAND_0052328,35,0.8301,4.3yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 6.5yrs exp (ideal range); response rate 79%; short notice; Pune-based
-CAND_0042029,36,0.8297,3.5yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 6.5yrs exp (ideal range); response rate 67%; Delhi-based
-CAND_0096142,37,0.8296,5.0yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.0yrs exp (ideal range); response rate 84%; Hyderabad-based
-CAND_0028793,38,0.8279,3.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 7.2yrs exp (ideal range); response rate 57%
-CAND_0068351,39,0.8274,6.3yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 6.4yrs exp (ideal range); response rate 86%; short notice; Delhi-based
-CAND_0033861,40,0.8252,7.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 8 relevant skills; 8.0yrs exp (ideal range); short notice
-CAND_0047721,41,0.8250,3.0yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 7.0yrs exp (ideal range)
-CAND_0055905,42,0.8242,8.0yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 8.1yrs exp (ideal range); response rate 87%; short notice
-CAND_0051004,43,0.8241,2.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 4.7yrs exp; short notice; Delhi-based
-CAND_0068932,44,0.8235,5.1yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 5.2yrs exp (ideal range); response rate 82%; active recently; short notice; Noida-based
-CAND_0083852,45,0.8210,5.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 6.0yrs exp (ideal range); response rate 85%; active recently
-CAND_0050876,46,0.8209,5.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 6.0yrs exp (ideal range); response rate 67%; active recently
-CAND_0048558,47,0.8205,6.6yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 6.7yrs exp (ideal range); response rate 80%; active recently; short notice; Noida-based
-CAND_0011432,48,0.8203,5.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 7.6yrs exp (ideal range); response rate 67%
-CAND_0016163,49,0.8198,6.6yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 6.7yrs exp (ideal range); response rate 72%; Gurgaon-based
-CAND_0069905,50,0.8196,6.5yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 6.6yrs exp (ideal range); response rate 78%
-CAND_0035879,51,0.8188,4.5yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 4.5yrs exp; response rate 82%; active recently; Noida-based
-CAND_0016659,52,0.8187,4.3yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 4.4yrs exp; response rate 89%; active recently
-CAND_0018549,53,0.8184,6.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 6.8yrs exp (ideal range); response rate 73%
-CAND_0002025,54,0.8180,5.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 5.9yrs exp (ideal range); response rate 80%; active recently; short notice
-CAND_0043860,55,0.8179,4.0yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 2 relevant skills; 6.1yrs exp (ideal range); response rate 81%; active recently; short notice
-CAND_0088025,56,0.8177,8.5yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 8.6yrs exp (ideal range); response rate 83%
-CAND_0037980,57,0.8160,8.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 2 relevant skills; 9.0yrs exp (ideal range); response rate 63%; short notice
-CAND_0012957,58,0.8153,4.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 4.9yrs exp; response rate 67%
-CAND_0091909,59,0.8153,6.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 6.9yrs exp (ideal range); response rate 65%; Bangalore-based
-CAND_0024466,60,0.8149,5.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.2yrs exp (ideal range); active recently
-CAND_0066999,61,0.8135,4.1yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.9yrs exp (ideal range); response rate 63%; short notice; Delhi-based
-CAND_0093547,62,0.8133,6.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 2.9yrs exp; response rate 75%
-CAND_0010603,63,0.8131,5.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 5.3yrs exp (ideal range); response rate 94%; active recently; Bangalore-based
-CAND_0020877,64,0.8125,3.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 7 relevant skills; 5.1yrs exp (ideal range); response rate 66%; Gurgaon-based
-CAND_0024620,65,0.8121,5.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.9yrs exp (ideal range)
-CAND_0018499,66,0.8104,7.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 7.2yrs exp (ideal range); response rate 61%; short notice; Noida-based
-CAND_0086151,67,0.8091,7.6yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 7.7yrs exp (ideal range); response rate 52%
-CAND_0039838,68,0.8082,4.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 7 relevant skills; 4.9yrs exp; response rate 80%
-CAND_0061175,69,0.8059,6.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 6.7yrs exp (ideal range); Gurgaon-based
-CAND_0006557,70,0.8044,7.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 8 relevant skills; 7.9yrs exp (ideal range); response rate 63%
-CAND_0007411,71,0.8042,7.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 8.0yrs exp (ideal range); inactive 200d; short notice
-CAND_0017960,72,0.8041,7.6yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 7.7yrs exp (ideal range); response rate 72%; Bangalore-based
-CAND_0061257,73,0.8024,7.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 2 relevant skills; 8.0yrs exp (ideal range); response rate 87%; short notice; Noida-based
-CAND_0024147,74,0.8019,5.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 5.9yrs exp (ideal range); response rate 84%
-CAND_0041568,75,0.8019,3.9yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 5.2yrs exp (ideal range); response rate 52%
-CAND_0099269,76,0.8019,5.4yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.5yrs exp (ideal range); active recently; Noida-based
-CAND_0051292,77,0.8009,5.0yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.2yrs exp (ideal range); response rate 52%; short notice
-CAND_0092706,78,0.8006,5.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5.8yrs exp (ideal range); response rate 78%; active recently; Delhi-based
-CAND_0010257,79,0.7993,1.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 6.5yrs exp (ideal range); response rate 72%; Noida-based
-CAND_0057563,80,0.7981,4.5yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 6.8yrs exp (ideal range); response rate 83%
-CAND_0006567,81,0.7979,7.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 7.9yrs exp (ideal range); response rate 79%; Noida-based
-CAND_0039754,82,0.7977,8.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 16.2yrs exp; response rate 81%; short notice
-CAND_0027801,83,0.7964,7.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 7.4yrs exp (ideal range); response rate 65%; Hyderabad-based
-CAND_0084819,84,0.7945,2.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 4.5yrs exp; response rate 74%
-CAND_0043228,85,0.7944,6.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 6.8yrs exp (ideal range); active recently; short notice
-CAND_0060072,86,0.7944,5.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.7yrs exp (ideal range)
-CAND_0039383,87,0.7941,7.0yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 7.1yrs exp (ideal range); response rate 61%; Gurgaon-based
-CAND_0064270,88,0.7930,4.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 4.2yrs exp; response rate 82%; Pune-based
-CAND_0070485,89,0.7928,6.3yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 6.4yrs exp (ideal range)
-CAND_0083307,90,0.7926,7.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 7 relevant skills; 7.8yrs exp (ideal range); response rate 70%
-CAND_0099751,91,0.7926,5.4yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 5.5yrs exp (ideal range); response rate 64%
-CAND_0009024,92,0.7925,5.1yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 5.2yrs exp (ideal range); short notice
-CAND_0008618,93,0.7924,4.6yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 4.7yrs exp; Gurgaon-based
-CAND_0087364,94,0.7922,4.8yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 4.9yrs exp; short notice; Gurgaon-based
-CAND_0032515,95,0.7911,5.0yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 5.1yrs exp (ideal range); response rate 54%
-CAND_0007596,96,0.7910,4.3yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 4 relevant skills; 4.4yrs exp; response rate 86%; active recently; Delhi-based
-CAND_0049538,97,0.7905,5.7yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 5.8yrs exp (ideal range); response rate 72%; active recently; short notice
-CAND_0048469,98,0.7903,3.6yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 6 relevant skills; 4.7yrs exp; response rate 59%; Delhi-based
-CAND_0067322,99,0.7889,4.2yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 5 relevant skills; 4.3yrs exp
-CAND_0076251,100,0.7877,4.1yrs ML/AI experience; retrieval/ranking/systems exp; product company background; 3 relevant skills; 7.6yrs exp (ideal range); response rate 51%
+CAND_0081846,1,0.8799,"Lead AI Engineer @ Razorpay | ex: Paytm | 6.6yr ML/AI + retrieval/ranking + prod ML | Elasticsearch, Vector Search, Python | IIT Delhi | 73% response, short notice"
+CAND_0086022,2,0.8719,"Senior Applied Scientist @ Sarvam AI | ex: Uber | 5.2yr ML/AI + retrieval/ranking + prod ML | Vector Search, Elasticsearch, QLoRA | Stanford University | 55% response, short notice"
+CAND_0006418,3,0.8683,"Machine Learning Engineer @ Verloop.io | ex: Flipkart | 5.6yr ML/AI + retrieval/ranking + prod ML | Embeddings, Weaviate, Elasticsearch | Stanford University | 92% response, Gurgaon"
+CAND_0099806,4,0.8678,"AI Engineer @ Mad Street Den | ex: upGrad | 4.5yr ML/AI + retrieval/ranking + prod ML | LoRA, FAISS, Embeddings | IIT Roorkee | 76% response, short notice"
+CAND_0064904,5,0.8665,"AI Engineer @ LinkedIn | ex: Freshworks | 4.8yr ML/AI + retrieval/ranking + prod ML | Embeddings, Elasticsearch, Python | Jadavpur University | 78% response, Hyderabad"
+CAND_0045250,6,0.8644,"Applied ML Engineer @ Rephrase.ai | ex: Paytm | 6.5yr ML/AI + retrieval/ranking + prod ML | Milvus, LoRA, Embeddings | Symbiosis International | 74% response, Delhi, short notice"
+CAND_0068811,7,0.8608,"Applied ML Engineer @ Freshworks | ex: Yellow.ai, Meesho | 7.9yr ML/AI + retrieval/ranking + prod ML | Vector Search, Qdrant, Embeddings | Thapar University | Pune, short notice"
+CAND_0037566,8,0.8601,"Machine Learning Engineer @ LinkedIn | ex: Paytm | 6.8yr ML/AI + retrieval/ranking + prod ML | Pinecone, LoRA, QLoRA | Jadavpur University | 50% response, Bangalore, short notice"
+CAND_0072660,9,0.8555,"Machine Learning Engineer @ Unacademy | ex: Adobe, Glance | 7.0yr ML/AI + retrieval/ranking + prod ML | LoRA, OpenSearch, QLoRA | Massachusetts Institute of Technology | 53% response, short notice"
+CAND_0071974,10,0.8524,"Senior AI Engineer @ Netflix | ex: Meta, Mad Street Den | 7.7yr ML/AI + retrieval/ranking + prod ML | LoRA, Weaviate, PEFT | NIT Warangal | 76% response"
+CAND_0030031,11,0.8518,"AI Engineer @ Microsoft | ex: Amazon, Google | 3.3yr ML/AI + retrieval/ranking + prod ML | Python, LoRA, QLoRA | IIT Bombay | 94% response, short notice"
+CAND_0062247,12,0.8514,"AI Engineer @ Google | ex: Dream11 | 7.2yr ML/AI + retrieval/ranking + prod ML | Pinecone, Vector Search, Qdrant | IIT Bombay | 78% response, short notice"
+CAND_0027691,13,0.8488,"NLP Engineer @ Haptik | ex: Vedantu, Meta | 6.3yr ML/AI + retrieval/ranking + prod ML | LoRA, PEFT, Weaviate | KIIT University | 68% response, Pune, short notice"
+CAND_0076163,14,0.8460,"NLP Engineer @ Ola | ex: Zoho | 6.8yr ML/AI + retrieval/ranking + prod ML | Weaviate, Python, Elasticsearch | VJTI Mumbai | 84% response"
+CAND_0011162,15,0.8444,"Recommendation Systems Engineer @ upGrad | ex: Meesho, Google | 5.7yr ML/AI + retrieval/ranking + prod ML | FAISS, Vector Search, LoRA | IIT Kharagpur | 75% response"
+CAND_0052682,16,0.8441,"NLP Engineer @ Aganitha | ex: Salesforce | 6.5yr ML/AI + retrieval/ranking + prod ML | QLoRA, FAISS, Python | IIT Guwahati | 88% response, short notice"
+CAND_0081053,17,0.8427,"NLP Engineer @ Glance | ex: Salesforce | 5.3yr ML/AI + retrieval/ranking + prod ML | LoRA, QLoRA, Qdrant | IIT Madras | 83% response"
+CAND_0011687,18,0.8425,"Senior NLP Engineer @ Niramai | ex: Krutrim | 7.7yr ML/AI + retrieval/ranking + prod ML | OpenSearch, FAISS, PEFT | IIT Delhi | 89% response, short notice"
+CAND_0013536,19,0.8425,"Applied ML Engineer @ Haptik | ex: Rephrase.ai | 4.7yr ML/AI + retrieval/ranking + prod ML | Embeddings, QLoRA, Pinecone | Chandigarh University | 87% response"
+CAND_0042506,20,0.8422,"Search Engineer @ Verloop.io | ex: Meesho | 4.2yr ML/AI + retrieval/ranking + prod ML | PEFT, Milvus, Qdrant | Amity University | Mumbai, short notice"
+CAND_0050454,21,0.8422,"AI Engineer @ Rephrase.ai | ex: Uber, Adobe | 6.8yr ML/AI + retrieval/ranking + prod ML | QLoRA, FAISS, Qdrant | IIT Kanpur | 77% response, Delhi, short notice"
+CAND_0010541,22,0.8417,"AI Research Engineer @ Wysa | ex: Wysa | 6.2yr ML/AI + retrieval/ranking + prod ML | Pinecone, Weaviate, MLOps | Manipal Institute of Technology | 59% response, Hyderabad"
+CAND_0074225,23,0.8413,"Machine Learning Engineer @ Unacademy | ex: Mad Street Den | 4.2yr ML/AI + retrieval/ranking + prod ML | Elasticsearch, Milvus, Python | Thapar University | 91% response"
+CAND_0046064,24,0.8394,"Senior NLP Engineer @ Salesforce | ex: Verloop.io, Amazon | 8.8yr ML/AI + retrieval/ranking + prod ML | Python, Pinecone, OpenSearch | BITS Pilani | 78% response, short notice"
+CAND_0015578,25,0.8393,"AI Engineer @ Zoho | ex: Glance | 5.3yr ML/AI + retrieval/ranking + prod ML | Embeddings, Pinecone, FAISS | NIT Surathkal | 65% response, Delhi"
+CAND_0077337,26,0.8391,"Staff Machine Learning Engineer @ Paytm | ex: Razorpay, Glance | 6.9yr ML/AI + retrieval/ranking + prod ML | QLoRA, Pinecone, Qdrant | Georgia Tech | 95% response"
+CAND_0094056,27,0.8390,"NLP Engineer @ Rephrase.ai | ex: Adobe | 5.8yr ML/AI + retrieval/ranking + prod ML | Pinecone, Milvus, PEFT | RV College of Engineering | 82% response"
+CAND_0020991,28,0.8386,"Junior ML Engineer @ PhonePe | ex: Unacademy | 4.8yr ML/AI + retrieval/ranking + prod ML | QLoRA, Python, LoRA | IIT Delhi | 88% response"
+CAND_0079387,29,0.8356,"AI Engineer @ Microsoft | ex: upGrad, Ola | 6.8yr ML/AI + retrieval/ranking + prod ML | Python, Vector Search, OpenSearch | IIIT Hyderabad | 81% response, short notice"
+CAND_0036437,30,0.8353,"Search Engineer @ Rephrase.ai | ex: Nykaa, Ola | 4.7yr ML/AI + retrieval/ranking + prod ML | OpenSearch, Elasticsearch, Milvus | Anna University | 87% response, short notice"
+CAND_0041669,31,0.8347,"Recommendation Systems Engineer @ CRED | ex: Mad Street Den, Yellow.ai | 7.9yr ML/AI + retrieval/ranking + prod ML | FAISS, Milvus, PEFT | IIT Guwahati | 77% response, Noida"
+CAND_0065195,32,0.8305,"Search Engineer @ CRED | ex: Google | 4.0yr ML/AI + retrieval/ranking + prod ML | QLoRA, Elasticsearch, Qdrant | IIT Bombay | 80% response"
+CAND_0080766,33,0.8304,"Staff Machine Learning Engineer @ Salesforce | ex: Aganitha, Swiggy | 8.8yr ML/AI + retrieval/ranking + prod ML | LoRA, MLOps, Elasticsearch | NIT Surathkal | 66% response, short notice"
+CAND_0061655,34,0.8302,"Machine Learning Engineer @ Krutrim | ex: Google | 4.5yr ML/AI + retrieval/ranking + prod ML | PEFT, Pinecone, Qdrant | NIT Warangal | 88% response, short notice"
+CAND_0052328,35,0.8301,"Recommendation Systems Engineer @ Amazon | ex: Observe.AI | 4.3yr ML/AI + retrieval/ranking + prod ML | LoRA, OpenSearch, QLoRA | Stanford University | 79% response, Pune, short notice"
+CAND_0042029,36,0.8297,"Senior Data Scientist @ Flipkart | ex: Observe.AI | 3.5yr ML/AI + retrieval/ranking + prod ML | Elasticsearch, Embeddings, OpenSearch | PES University | 67% response, Delhi"
+CAND_0096142,37,0.8296,"Applied ML Engineer @ upGrad | ex: BYJU'S | 5.0yr ML/AI + retrieval/ranking + prod ML | LoRA, Weaviate, Pinecone | IIIT Bangalore | 84% response, Hyderabad"
+CAND_0028793,38,0.8279,"Search Engineer @ Google | ex: Amazon, Meesho | 3.8yr ML/AI + retrieval/ranking + prod ML | Embeddings, LoRA, PEFT | Massachusetts Institute of Technology | 57% response"
+CAND_0068351,39,0.8274,"Lead AI Engineer @ Sarvam AI | ex: Verloop.io, Microsoft | 6.3yr ML/AI + retrieval/ranking + prod ML | Qdrant, Elasticsearch, PEFT | Carnegie Mellon University | 86% response, Delhi, short notice"
+CAND_0033861,40,0.8252,"Senior NLP Engineer @ Mad Street Den | ex: Sarvam AI, Paytm | 7.9yr ML/AI + retrieval/ranking + prod ML | Weaviate, LoRA, Elasticsearch | IIT Madras | short notice"
+CAND_0047721,41,0.8250,"Senior Data Scientist @ Microsoft | ex: Observe.AI | 3.0yr ML/AI + retrieval/ranking + prod ML | MLOps, Milvus, FAISS | IIT Kharagpur"
+CAND_0055905,42,0.8242,"Senior Machine Learning Engineer @ Flipkart | ex: Uber, Rephrase.ai | 8.0yr ML/AI + retrieval/ranking + prod ML | Elasticsearch, Python, OpenSearch | IIT Kharagpur | 87% response, short notice"
+CAND_0051004,43,0.8241,"Senior Data Scientist @ CRED | ex: Niramai | 2.7yr ML/AI + retrieval/ranking + prod ML | Embeddings, Qdrant, PEFT | IIT Kanpur | Delhi, short notice"
+CAND_0068932,44,0.8235,"ML Engineer @ Krutrim | ex: Vedantu | 5.1yr ML/AI + retrieval/ranking + prod ML | MLOps, Milvus, OpenSearch | Amity University | 82% response, Noida, short notice"
+CAND_0083852,45,0.8210,"Data Scientist @ Mad Street Den | ex: Dream11 | 5.9yr ML/AI + retrieval/ranking + prod ML | Qdrant, QLoRA, Pinecone | RV College of Engineering | 85% response"
+CAND_0050876,46,0.8209,"Applied ML Engineer @ Freshworks | ex: Yellow.ai, Razorpay | 5.9yr ML/AI + retrieval/ranking + prod ML | Qdrant, MLOps, FAISS | IIT Kharagpur | 67% response"
+CAND_0048558,47,0.8205,"Data Scientist @ Rephrase.ai | ex: Aganitha, Paytm | 6.6yr ML/AI + retrieval/ranking + prod ML | OpenSearch, Qdrant, Elasticsearch | VIT Vellore | 80% response, Noida, short notice"
+CAND_0011432,48,0.8203,"Senior Data Scientist @ Amazon | ex: Krutrim, Nykaa | 5.2yr ML/AI + retrieval/ranking + prod ML | MLOps, OpenSearch, PEFT | Bharati Vidyapeeth | 67% response"
+CAND_0016163,49,0.8198,"Applied ML Engineer @ Dream11 | ex: Verloop.io, Amazon | 6.6yr ML/AI + retrieval/ranking + prod ML | Weaviate, Embeddings, LoRA | Jadavpur University | 72% response, Gurgaon"
+CAND_0069905,50,0.8196,"Applied ML Engineer @ Sarvam AI | ex: Nykaa, Observe.AI | 6.5yr ML/AI + retrieval/ranking + prod ML | LoRA, MLOps, Python | PES University | 78% response"
+CAND_0035879,51,0.8188,"AI Research Engineer @ Krutrim | ex: Nykaa | 4.5yr ML/AI + retrieval/ranking + prod ML | Pinecone, Elasticsearch, Python | IIT Madras | 82% response, Noida"
+CAND_0016659,52,0.8187,"ML Engineer @ Glance | ex: Flipkart | 4.3yr ML/AI + retrieval/ranking + prod ML | Pinecone, PEFT, FAISS | IIT Hyderabad | 89% response"
+CAND_0018549,53,0.8184,"Recommendation Systems Engineer @ Uber | ex: Flipkart | 6.8yr ML/AI + retrieval/ranking + prod ML | Weaviate, Elasticsearch, Qdrant | Stanford University | 73% response"
+CAND_0002025,54,0.8180,"Senior AI Engineer @ Apple | ex: Aganitha | 5.8yr ML/AI + retrieval/ranking + prod ML | FAISS, OpenSearch, Weaviate | IIIT Bangalore | 80% response, short notice"
+CAND_0043860,55,0.8179,"Junior ML Engineer @ Aganitha | ex: Nykaa | 4.0yr ML/AI + retrieval/ranking + prod ML | Qdrant, Vector Search | PES University | 81% response, short notice"
+CAND_0088025,56,0.8177,"Staff Machine Learning Engineer @ Yellow.ai | ex: Niramai, Genpact AI | 8.5yr ML/AI + retrieval/ranking + prod ML | Pinecone, QLoRA, LoRA | COEP Pune | 83% response"
+CAND_0037980,57,0.8160,"Senior Applied Scientist @ Niramai | ex: Verloop.io, Salesforce | 8.9yr ML/AI + retrieval/ranking + prod ML | LoRA, QLoRA | BITS Pilani | 63% response, short notice"
+CAND_0012957,58,0.8153,"Search Engineer @ Razorpay | ex: Mad Street Den | 4.8yr ML/AI + retrieval/ranking + prod ML | PEFT, Qdrant, Python | Delhi College of Engineering | 67% response"
+CAND_0091909,59,0.8153,"Machine Learning Engineer @ Rephrase.ai | ex: Meta | 6.8yr ML/AI + retrieval/ranking + prod ML | Pinecone, QLoRA, Qdrant | IIIT Bangalore | 65% response, Bangalore"
+CAND_0024466,60,0.8149,"Search Engineer @ PharmEasy | ex: Mad Street Den | 5.2yr ML/AI + retrieval/ranking + prod ML | MLOps, LoRA, Pinecone | Anna University"
+CAND_0066999,61,0.8135,"Recommendation Systems Engineer @ Microsoft | ex: Amazon | 4.1yr ML/AI + retrieval/ranking + prod ML | OpenSearch, FAISS, Pinecone | IIT Roorkee | 63% response, Delhi, short notice"
+CAND_0093547,62,0.8133,"Senior Machine Learning Engineer @ PhonePe | ex: Sarvam AI, Aganitha | 6.2yr ML/AI + retrieval/ranking + prod ML | Python, QLoRA, PEFT | UC Berkeley | 75% response"
+CAND_0010603,63,0.8131,"ML Engineer @ BYJU'S | ex: BYJU'S | 5.2yr ML/AI + retrieval/ranking + prod ML | OpenSearch, MLOps, PEFT | Anna University | 94% response, Bangalore"
+CAND_0020877,64,0.8125,"Applied ML Engineer @ CRED | ex: BYJU'S | 3.2yr ML/AI + retrieval/ranking | QLoRA, Elasticsearch, OpenSearch | Delhi College of Engineering | 66% response, Gurgaon"
+CAND_0024620,65,0.8121,"AI Engineer @ PharmEasy | ex: Glance, Saarthi.ai | 5.8yr ML/AI + retrieval/ranking + prod ML | Python, PEFT, Elasticsearch | VIT Vellore"
+CAND_0018499,66,0.8104,"Senior Machine Learning Engineer @ Zomato | ex: Google, Flipkart | 7.2yr ML/AI + retrieval/ranking + prod ML | Weaviate, Pinecone, Milvus | NIT Surathkal | 61% response, Noida, short notice"
+CAND_0086151,67,0.8091,"Recommendation Systems Engineer @ Wysa | ex: Glance, Meta | 7.6yr ML/AI + retrieval/ranking + prod ML | Qdrant, OpenSearch, Embeddings | Symbiosis International | 52% response"
+CAND_0039838,68,0.8082,"Recommendation Systems Engineer @ Amazon | ex: Microsoft | 4.8yr ML/AI + retrieval/ranking + prod ML | MLOps, Embeddings, LoRA | Georgia Tech | 80% response"
+CAND_0061175,69,0.8059,"AI Research Engineer @ Haptik | ex: Mad Street Den, Haptik | 6.7yr ML/AI + retrieval/ranking + prod ML | Python, Milvus, Vector Search | Symbiosis International | Gurgaon"
+CAND_0006557,70,0.8044,"NLP Engineer @ Paytm | ex: Apple | 7.8yr ML/AI + retrieval/ranking + prod ML | Elasticsearch, OpenSearch, Vector Search | RV College of Engineering | 63% response"
+CAND_0007411,71,0.8042,"Senior Machine Learning Engineer @ Amazon | ex: Yellow.ai | 7.9yr ML/AI + retrieval/ranking + prod ML | OpenSearch, Vector Search, Pinecone | IIT Roorkee | short notice"
+CAND_0017960,72,0.8041,"Recommendation Systems Engineer @ Nykaa | ex: Wysa, Sarvam AI | 7.6yr ML/AI + retrieval/ranking + prod ML | QLoRA, Qdrant, PEFT | IIT Delhi | 72% response, Bangalore"
+CAND_0061257,73,0.8024,"Staff Machine Learning Engineer @ LinkedIn | ex: Yellow.ai | 7.9yr ML/AI + retrieval/ranking + prod ML | PEFT, Python | IIT Roorkee | 87% response, Noida, short notice"
+CAND_0024147,74,0.8019,"ML Engineer @ Ola | ex: PhonePe | 5.8yr ML/AI + retrieval/ranking + prod ML | Qdrant, OpenSearch, QLoRA | Thapar University | 84% response"
+CAND_0041568,75,0.8019,"Search Engineer @ Haptik | ex: Salesforce, Flipkart | 3.9yr ML/AI + retrieval/ranking + prod ML | PEFT, Weaviate, Vector Search | IIT Kharagpur | 52% response"
+CAND_0099269,76,0.8019,"Data Scientist @ BYJU'S | ex: Aganitha | 5.4yr ML/AI + retrieval/ranking + prod ML | Elasticsearch, Python, Qdrant | NIT Trichy | Noida"
+CAND_0051292,77,0.8009,"Applied ML Engineer @ Freshworks | ex: Vedantu | 5.0yr ML/AI + retrieval/ranking + prod ML | FAISS, Vector Search, PEFT | Manipal Institute of Technology | 52% response, short notice"
+CAND_0092706,78,0.8006,"AI Research Engineer @ Unacademy | ex: Glance | 5.8yr ML/AI + retrieval/ranking + prod ML | MLOps | IIT Bombay | 78% response, Delhi"
+CAND_0010257,79,0.7993,"Senior Data Scientist @ Google | ex: PharmEasy, Google | 1.2yr ML/AI + retrieval/ranking + prod ML | Milvus, Python, OpenSearch | COEP Pune | 72% response, Noida"
+CAND_0057563,80,0.7981,"NLP Engineer @ Locobuzz | ex: Yellow.ai, Zoho | 4.5yr ML/AI + retrieval/ranking + prod ML | Elasticsearch, OpenSearch, QLoRA | Amity University | 83% response"
+CAND_0006567,81,0.7979,"Senior AI Engineer @ Meta | ex: Razorpay, Glance | 7.8yr ML/AI + retrieval/ranking + prod ML | Python | IIT Bombay | 79% response, Noida"
+CAND_0039754,82,0.7977,"Senior Applied Scientist @ Meta | ex: Apple, Observe.AI | 8.2yr ML/AI + retrieval/ranking + prod ML | Qdrant, OpenSearch, Weaviate | IIT Hyderabad | 81% response, short notice"
+CAND_0027801,83,0.7964,"NLP Engineer @ InMobi | ex: Zoho, Uber | 7.2yr ML/AI + retrieval/ranking + prod ML | FAISS, Milvus, QLoRA | Manipal Institute of Technology | 65% response, Hyderabad"
+CAND_0084819,84,0.7945,"Search Engineer @ Dream11 | ex: Razorpay | 2.8yr ML/AI + retrieval/ranking + prod ML | MLOps, OpenSearch, Weaviate | Christ University | 74% response"
+CAND_0043228,85,0.7944,"Applied ML Engineer @ Zoho | ex: Vedantu, Yellow.ai | 6.7yr ML/AI + retrieval/ranking + prod ML | Vector Search, Weaviate, OpenSearch | IIT Madras | short notice"
+CAND_0060072,86,0.7944,"Staff Machine Learning Engineer @ Amazon | ex: Wysa | 5.7yr ML/AI + retrieval/ranking + prod ML | Milvus, Qdrant, Embeddings | UC Berkeley"
+CAND_0039383,87,0.7941,"Applied ML Engineer @ Meesho | ex: Swiggy, Paytm | 7.0yr ML/AI + retrieval/ranking + prod ML | FAISS, QLoRA, LoRA | IISc Bangalore | 61% response, Gurgaon"
+CAND_0064270,88,0.7930,"Applied ML Engineer @ Verloop.io | ex: Uber | 4.2yr ML/AI + retrieval/ranking + prod ML | Embeddings, OpenSearch, Elasticsearch | SRM Chennai | 82% response, Pune"
+CAND_0070485,89,0.7928,"Search Engineer @ Saarthi.ai | ex: Dream11 | 6.3yr ML/AI + retrieval/ranking + prod ML | PEFT, FAISS, QLoRA | IIT Kharagpur"
+CAND_0083307,90,0.7926,"Search Engineer @ CRED | ex: Netflix, Ola | 7.7yr ML/AI + retrieval/ranking + prod ML | Embeddings, QLoRA, PEFT | VIT Chennai | 70% response"
+CAND_0099751,91,0.7926,"Junior ML Engineer @ Observe.AI | ex: Mad Street Den | 5.4yr ML/AI + retrieval/ranking + prod ML | QLoRA, MLOps, Weaviate | Manipal Institute of Technology | 64% response"
+CAND_0009024,92,0.7925,"Search Engineer @ Google | ex: Aganitha | 5.1yr ML/AI + retrieval/ranking | Qdrant, PEFT, FAISS | Stanford University | short notice"
+CAND_0008618,93,0.7924,"Computer Vision Engineer @ Saarthi.ai | ex: Zoho | 4.6yr ML/AI + retrieval/ranking + prod ML | Embeddings, PEFT, OpenSearch | Local Engineering College | Gurgaon"
+CAND_0087364,94,0.7922,"Recommendation Systems Engineer @ Glance | ex: Rephrase.ai | 4.8yr ML/AI + retrieval/ranking + prod ML | Qdrant, Milvus, Pinecone | Bharati Vidyapeeth | Gurgaon, short notice"
+CAND_0032515,95,0.7911,"Machine Learning Engineer @ PharmEasy | ex: Razorpay, Zoho | 5.0yr ML/AI + retrieval/ranking + prod ML | Milvus, Vector Search, QLoRA | Carnegie Mellon University | 54% response"
+CAND_0007596,96,0.7910,"Junior ML Engineer @ Flipkart | ex: Meesho | 4.3yr ML/AI + retrieval/ranking + prod ML | Python, Weaviate, Vector Search | Local Engineering College | 86% response, Delhi"
+CAND_0049538,97,0.7905,"Applied ML Engineer @ Saarthi.ai | ex: PolicyBazaar, Zoho | 5.7yr ML/AI + retrieval/ranking + prod ML | OpenSearch, Vector Search, Milvus | NIT Warangal | 72% response, short notice"
+CAND_0048469,98,0.7903,"Computer Vision Engineer @ Vedantu | ex: Locobuzz, Zoho | 3.6yr ML/AI + retrieval/ranking + prod ML | Embeddings, Qdrant, Milvus | Amity University | 59% response, Delhi"
+CAND_0067322,99,0.7889,"Data Scientist @ Nykaa | ex: Niramai | 4.2yr ML/AI + retrieval/ranking + prod ML | FAISS, OpenSearch, Qdrant | VIT Vellore"
+CAND_0076251,100,0.7877,"Search Engineer @ Haptik | ex: CRED, Microsoft | 4.1yr ML/AI + retrieval/ranking + prod ML | Weaviate, Elasticsearch, PEFT | Jadavpur University | 51% response"

@@ -1,6 +1,19 @@
 from __future__ import annotations
 
 import re
+from candidate_ranker.redrob_models import Candidate, Skill
+
+JD_CORE_SKILLS = frozenset({
+    "embeddings", "retrieval", "ranking", "vector database",
+    "vector search", "hybrid search", "pinecone", "weaviate",
+    "qdrant", "milvus", "opensearch", "elasticsearch", "faiss",
+    "sentence-transformers", "bge", "e5", "evaluation",
+    "ndcg", "mrr", "map", "fine-tuning", "lora", "qlora", "peft",
+    "llm", "large language model", "python", "production ml",
+    "mlops",
+})
+
+PROFICIENCY_LABEL = {"beginner": "B", "intermediate": "I", "advanced": "A", "expert": "E"}
 
 
 def score_candidate(features: dict) -> float:
@@ -244,68 +257,88 @@ def _score_education_location(f: dict) -> float:
     return min(score, 1.0)
 
 
-def generate_reasoning(candidate_id: str, features: dict, score: float, rank: int) -> str:
-    """Generate human-readable reasoning for a candidate."""
-    parts = []
+def _get_matched_skill_names(candidate: Candidate) -> list[str]:
+    """Return names of skills that match the JD core taxonomy."""
+    matched = []
+    for s in candidate.skills:
+        name_lower = s.name.lower().strip()
+        if name_lower in JD_CORE_SKILLS:
+            matched.append(s.name)
+    return matched[:3]
 
-    title = features.get("current_title", "Professional")
+
+def _prev_company_str(candidate: Candidate | None) -> str:
+    """Previous company names only, up to 2."""
+    if not candidate or not candidate.career_history:
+        return ""
+    seen = []
+    for entry in candidate.career_history:
+        if entry.is_current:
+            continue
+        co = entry.company.strip()
+        if co and co not in seen:
+            seen.append(co)
+        if len(seen) >= 2:
+            break
+    return ", ".join(seen) if seen else ""
+
+
+def generate_reasoning(
+    candidate_id: str, features: dict, score: float, rank: int,
+    candidate: Candidate | None = None,
+) -> str:
+    """Clean one-line summary — easy for a recruiter to scan."""
+
+    title = features.get("current_title", "")
     company = features.get("current_company", "")
-    years = features.get("years_exp", 0)
-    has_ml = features.get("ml_title_count", 0) > 0
-    has_retrieval = features.get("has_retrieval_exp", False)
-    core_skills = features.get("core_skill_count", 0)
-    response_rate = features.get("recruiter_response_rate", 0)
-    days_inactive = features.get("days_since_active", 999)
-    location = features.get("location", "Unknown")
-    country = features.get("country", "Unknown")
-    notice = features.get("notice_period_days", 90)
-    prod_company = features.get("product_role_count", 0) > 0
-    consulting = features.get("consulting_role_count", 0)
-    total_roles = features.get("total_roles", 0)
-    exp_years = features.get("years_exp", 0)
-    edu_tier = features.get("education_tier_score", 0)
+    current = f"{title} @ {company}" if title and company else title
+
+    prev = _prev_company_str(candidate)
 
     relevant_exp = features.get("total_relevant_months", 0) / 12.0
-    if relevant_exp > 0:
-        parts.append(f"{relevant_exp:.1f}yrs ML/AI experience")
-    elif has_ml:
-        parts.append("Some ML/AI exposure")
+    has_retrieval = features.get("has_retrieval_exp", False)
+    has_prod = features.get("has_production_ml", False)
+    exp = f"{relevant_exp:.1f}yr ML/AI" if relevant_exp > 0 else ""
+    if has_retrieval:
+        exp += " + retrieval/ranking"
+    if has_prod:
+        exp += " + prod ML"
 
-    if has_retrieval and relevant_exp > 0:
-        parts.append("retrieval/ranking/systems exp")
-    elif has_retrieval:
-        parts.append("has search/ranking exposure")
+    skill_names = _get_matched_skill_names(candidate) if candidate else []
+    skills = ", ".join(skill_names) if skill_names else ""
 
-    if prod_company:
-        parts.append("product company background")
-    elif total_roles > 0 and consulting == total_roles:
-        parts.append("consulting-only background")
+    edu = ""
+    if candidate and candidate.education:
+        best = candidate.education[0]
+        for e in candidate.education:
+            if e.tier in ("tier_1",) or (e.end_year or 0) > (best.end_year or 0):
+                best = e
+        edu = best.institution.strip()
 
-    if core_skills >= 5:
-        parts.append(f"{core_skills} relevant skills")
-    elif core_skills >= 2:
-        parts.append(f"{core_skills} relevant skills")
+    rr = features.get("recruiter_response_rate", 0)
+    signal = f"{rr:.0%} response" if rr >= 0.5 else ""
 
-    if exp_years > 0:
-        if 5 <= exp_years <= 9:
-            parts.append(f"{exp_years}yrs exp (ideal range)")
-        else:
-            parts.append(f"{exp_years}yrs exp")
+    loc = features.get("location", "")
+    preferred = {"pune", "noida", "mumbai", "delhi", "gurgaon", "hyderabad", "bangalore"}
+    city = ""
+    if loc and any(c in loc.lower() for c in preferred):
+        city = loc.split(",")[0].strip()
 
-    if response_rate > 0.5:
-        parts.append(f"response rate {response_rate:.0%}")
-    if days_inactive < 30:
-        parts.append("active recently")
-    elif days_inactive > 180:
-        parts.append(f"inactive {days_inactive}d")
+    notice = features.get("notice_period_days", 90)
+    notice_str = "short notice" if notice <= 30 else ""
 
-    if notice <= 30:
-        parts.append("short notice")
+    # Build minimal, scannable string
+    bits = [current]
+    if prev:
+        bits.append(f"ex: {prev}")
+    if exp:
+        bits.append(exp)
+    if skills:
+        bits.append(skills)
+    if edu:
+        bits.append(edu)
+    tail = ", ".join(s for s in [signal, city, notice_str] if s)
+    if tail:
+        bits.append(tail)
 
-    preferred_cities = {"pune", "noida", "mumbai", "delhi", "gurgaon", "hyderabad", "bangalore"}
-    loc_parts = location.lower().split(",")
-    if any(city in loc_parts[0] if loc_parts else location.lower() for city in preferred_cities):
-        parts.append(f"{location.split(',')[0].strip()}-based")
-
-    result = "; ".join(parts) if parts else "Limited profile data"
-    return result[:200]
+    return " | ".join(bits)[:250]

@@ -63,7 +63,7 @@ def main() -> None:
             logger.info("  Processed %d / %d", idx + 1, len(candidates))
         features = extract_features(cand)
         score = score_candidate(features)
-        scored.append((score, cand.candidate_id, features))
+        scored.append((score, cand.candidate_id, features, cand))
     t2 = time.time()
     logger.info("Scored %d candidates in %.1fs", len(scored), t2 - t1)
 
@@ -73,9 +73,9 @@ def main() -> None:
     top_n = min(args.top_n, len(scored))
     ranked = []
     for rank_idx in range(top_n):
-        score, cid, features = scored[rank_idx]
+        score, cid, features, cand = scored[rank_idx]
         rounded_score = round(score, 4)
-        reasoning = generate_reasoning(cid, features, rounded_score, rank_idx + 1)
+        reasoning = generate_reasoning(cid, features, rounded_score, rank_idx + 1, cand)
         ranked.append({
             "candidate_id": cid,
             "rank": rank_idx + 1,
