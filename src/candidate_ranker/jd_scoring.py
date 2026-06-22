@@ -21,37 +21,42 @@ def score_candidate(features: dict) -> float:
     s = 0.0
     debug = {}
 
-    # 1. ML/AI Engineering Experience (weight: 0.30)
+    # 1. ML/AI Engineering Experience (weight: 0.28)
     ml_score = _score_ml_experience(features)
-    s += ml_score * 0.30
+    s += ml_score * 0.28
     debug["ml_experience"] = round(ml_score, 4)
 
-    # 2. Product Company Experience (weight: 0.20)
+    # 2. Product Company Experience (weight: 0.18)
     product_score = _score_product_experience(features)
-    s += product_score * 0.20
+    s += product_score * 0.18
     debug["product_experience"] = round(product_score, 4)
 
-    # 3. Skill Relevance (weight: 0.20)
+    # 3. Skill Relevance (weight: 0.18)
     skill_score = _score_skills(features)
-    s += skill_score * 0.20
+    s += skill_score * 0.18
     debug["skills"] = round(skill_score, 4)
 
-    # 4. Career Stability & Trajectory (weight: 0.10)
+    # 4. Startup / Founding-Team Experience (weight: 0.10)
+    startup_score = _score_startup_experience(features)
+    s += startup_score * 0.10
+    debug["startup"] = round(startup_score, 4)
+
+    # 5. Career Stability & Trajectory (weight: 0.08)
     stability_score = _score_stability(features)
-    s += stability_score * 0.10
+    s += stability_score * 0.08
     debug["stability"] = round(stability_score, 4)
 
-    # 5. Experience Alignment (weight: 0.05)
+    # 6. Experience Alignment (weight: 0.05)
     exp_years_score = _score_experience_years(features)
     s += exp_years_score * 0.05
     debug["exp_years"] = round(exp_years_score, 4)
 
-    # 6. Behavioral Signals (weight: 0.10)
+    # 7. Behavioral Signals (weight: 0.08)
     behavioral_score = _score_behavioral(features)
-    s += behavioral_score * 0.10
+    s += behavioral_score * 0.08
     debug["behavioral"] = round(behavioral_score, 4)
 
-    # 7. Education & Location (weight: 0.05)
+    # 8. Education & Location (weight: 0.05)
     edu_loc_score = _score_education_location(features)
     s += edu_loc_score * 0.05
     debug["edu_location"] = round(edu_loc_score, 4)
@@ -71,11 +76,16 @@ def _score_ml_experience(f: dict) -> float:
     retrieval_exp = f.get("has_retrieval_exp", False)
     prod_ml = f.get("has_production_ml", False)
     relevant_months = f.get("total_relevant_months", 0)
+    summary_ml = f.get("summary_ml_mentions", 0)
 
     if current_is_ml:
         score += 0.30
     elif has_ml_role:
         score += 0.20
+    elif summary_ml >= 3:
+        score += 0.15
+    elif summary_ml >= 1:
+        score += 0.08
     else:
         score += 0.05
 
@@ -83,6 +93,8 @@ def _score_ml_experience(f: dict) -> float:
         score += 0.30
     elif has_ml_role:
         score += 0.10
+    elif summary_ml >= 2:
+        score += 0.08
 
     if prod_ml:
         score += 0.20
@@ -112,6 +124,28 @@ def _score_product_experience(f: dict) -> float:
         return 0.3 + 0.7 * min(ratio, 1.0)
 
     return 0.3
+
+
+def _score_startup_experience(f: dict) -> float:
+    score = 0.0
+
+    startup_roles = f.get("startup_role_count", 0)
+    current_is_startup = f.get("current_is_startup", False)
+    summary_startup = f.get("summary_startup_mentions", 0)
+
+    if current_is_startup:
+        score += 0.50
+    elif startup_roles >= 2:
+        score += 0.35
+    elif startup_roles >= 1:
+        score += 0.20
+
+    if summary_startup >= 2 and startup_roles == 0:
+        score += 0.15
+    elif summary_startup >= 1 and startup_roles == 0:
+        score += 0.05
+
+    return min(score, 1.0)
 
 
 def _score_skills(f: dict) -> float:
@@ -230,7 +264,13 @@ def _score_behavioral(f: dict) -> float:
     if interview_rate > 0.8:
         score += 0.05
 
-    return min(score, 1.0)
+    non_ml = f.get("summary_non_ml_mentions", 0)
+    if non_ml >= 3:
+        score -= 0.10
+    elif non_ml >= 1:
+        score -= 0.05
+
+    return max(0.0, min(score, 1.0))
 
 
 def _score_education_location(f: dict) -> float:
@@ -327,6 +367,9 @@ def generate_reasoning(
     notice = features.get("notice_period_days", 90)
     notice_str = "short notice" if notice <= 30 else ""
 
+    startup_roles = features.get("startup_role_count", 0)
+    startup_str = f"{startup_roles}x startup" if startup_roles >= 1 else ""
+
     # Build minimal, scannable string
     bits = [current]
     if prev:
@@ -337,7 +380,7 @@ def generate_reasoning(
         bits.append(skills)
     if edu:
         bits.append(edu)
-    tail = ", ".join(s for s in [signal, city, notice_str] if s)
+    tail = ", ".join(s for s in [signal, city, notice_str, startup_str] if s)
     if tail:
         bits.append(tail)
 

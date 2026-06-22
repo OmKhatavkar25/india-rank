@@ -4,7 +4,7 @@ team_name: "team_rankai"
 primary_contact:
   name: "Om Khatavkar"
   email: "omkhatavkar7@gmail.com"
-  phone: "+91-XXXXXXXXXX"
+  phone: "+91-XXXXXXXXXX"  # Will be updated via portal
 
 team_members:
   - name: "Om Khatavkar"
@@ -13,7 +13,7 @@ team_members:
 
 github_repo: "https://github.com/OmKhatavkar25/india-rank"
 
-sandbox_link: "https://huggingface.co/spaces/omkhatavkar/redrob-ranker"
+sandbox_link: "https://github.com/OmKhatavkar25/india-rank"  # Click "Code" → "Codespaces" → "New codespace" to run
 
 reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
 
@@ -37,16 +37,18 @@ ai_usage_summary: |
   and architecture were designed and built manually by the human participant.
 
 methodology_summary: |
-  Rule-based ranker with explicit reasoning. Seven scoring components
+  Rule-based ranker with explicit reasoning. Eight scoring components
   (ML/AI experience, product company background, skill relevance,
-  career stability, experience years, behavioral signals, education/location)
-  weighted to match the Senior AI Engineer JD. The key insight is that the JD
-  explicitly warns against keyword counting — so the ranker evaluates career
-  history for actual ML/AI roles at product companies, detection of retrieval/
-  ranking/embedding experience in role descriptions, and penalizes consulting-only
-  backgrounds. Behavioral signals (response rate, recency, notice period) act
-  as a multiplier. Honeypot detection flags impossible skill/experience combos.
-  Runtime: ~12 seconds for 100K candidates on CPU.
+  startup experience, career stability, experience years,
+  behavioral signals, education/location) weighted to match
+  the Senior AI Engineer Founding Team JD. The key insight: the JD
+  explicitly warns against keyword counting — so the ranker evaluates
+  career history for actual ML/AI roles at product companies, detects
+  retrieval/ranking/embedding experience, and penalizes consulting-only
+  backgrounds. Startup experience bonus surfaces founding-team-fit
+  candidates. Summary/headline parsing catches ML profiles missed by
+  title-only matching. Honeypot detection flags impossible skill/exp
+  combos. Runtime: ~15 seconds for 100K candidates on CPU.
 
 declarations:
   read_submission_spec: true

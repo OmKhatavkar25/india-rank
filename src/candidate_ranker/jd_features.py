@@ -75,6 +75,8 @@ def _extract_role_keywords(candidate: Candidate) -> dict:
     consulting_role_count = 0
     product_role_count = 0
     total_relevant_months = 0
+    startup_role_count = 0
+    current_is_startup = False
 
     tenures = []
     current_title_lower = _normalize(candidate.profile.current_title)
@@ -114,10 +116,23 @@ def _extract_role_keywords(candidate: Candidate) -> dict:
 
         if company_lower in CONSULTING_FIRMS:
             consulting_role_count += 1
-        elif industry_lower in PRODUCT_COMPANY_INDUSTRIES or entry.company_size in (
-            "11-50", "51-200", "201-500", "501-1000"
+        elif industry_lower in PRODUCT_COMPANY_INDUSTRIES or (
+            entry.company_size in ("11-50", "51-200", "201-500", "501-1000")
+            and company_lower not in CONSULTING_FIRMS
         ):
             product_role_count += 1
+
+        if (
+            entry.company_size in ("1-10", "11-50")
+            and company_lower not in CONSULTING_FIRMS
+        ) or any(t in title_lower for t in [
+            "co-founder", "founder", "founding engineer",
+            "founding software engineer", "founding ml engineer",
+            "early engineer",
+        ]):
+            startup_role_count += 1
+            if entry.is_current:
+                current_is_startup = True
 
     if tenures:
         avg_tenure_months = sum(tenures) / len(tenures)
@@ -135,6 +150,8 @@ def _extract_role_keywords(candidate: Candidate) -> dict:
         "consulting_role_count": consulting_role_count,
         "product_role_count": product_role_count,
         "total_relevant_months": total_relevant_months,
+        "startup_role_count": startup_role_count,
+        "current_is_startup": current_is_startup,
     }
 
 
@@ -242,6 +259,45 @@ def _extract_education_features(candidate: Candidate) -> dict:
     }
 
 
+def _extract_summary_signals(candidate: Candidate) -> dict:
+    headline = _normalize(candidate.profile.headline)
+    summary = _normalize(candidate.profile.summary)
+    combined = f"{headline} {summary}"
+
+    ml_keywords = [
+        "machine learning", "deep learning", "nlp", "natural language processing",
+        "recommendation system", "recommendation engine", "ranking algorithm",
+        "information retrieval", "search algorithm", "neural network",
+        "transformer", "embedding", "vector database", "vector search",
+        "trained model", "built model", "deployed model", "production model",
+        "a/b testing", "experimentation", "data science",
+        "llm", "large language model", "fine-tuning", "pytorch", "tensorflow",
+        "xgboost", "gradient boosting", "retrieval augmented generation", "rag",
+    ]
+
+    startup_keywords = [
+        "startup", "early-stage", "early stage", "0-to-1", "0 to 1",
+        "founding team", "first engineer", "seed stage", "series a",
+        "built from scratch", "greenfield",
+    ]
+
+    non_ml_domains = [
+        "marketing", "sales", "accounting", "hr", "recruitment",
+        "customer support", "content writing", "administration",
+        "mechanical engineering", "civil engineering",
+    ]
+
+    ml_mentions = sum(1 for kw in ml_keywords if kw in combined)
+    startup_mentions = sum(1 for kw in startup_keywords if kw in combined)
+    non_ml_mentions = sum(1 for kw in non_ml_domains if kw in combined)
+
+    return {
+        "summary_ml_mentions": min(ml_mentions, 10),
+        "summary_startup_mentions": min(startup_mentions, 5),
+        "summary_non_ml_mentions": non_ml_mentions,
+    }
+
+
 def _check_honeypot(candidate: Candidate) -> float:
     penalty = 0.0
 
@@ -271,6 +327,7 @@ def extract_features(candidate: Candidate) -> dict:
     skills = _extract_skill_features(candidate)
     behavioral = _extract_behavioral_features(candidate)
     education = _extract_education_features(candidate)
+    summary = _extract_summary_signals(candidate)
     honeypot = _check_honeypot(candidate)
 
     return {
@@ -278,6 +335,7 @@ def extract_features(candidate: Candidate) -> dict:
         **skills,
         **behavioral,
         **education,
+        **summary,
         "honeypot_penalty": honeypot,
         "years_exp": candidate.profile.years_of_experience,
         "location": candidate.profile.location,
