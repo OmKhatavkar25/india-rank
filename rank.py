@@ -33,8 +33,8 @@ def main() -> None:
     )
     parser.add_argument(
         "--candidates", "-c",
-        required=True,
-        help="Path to candidates.jsonl (or .jsonl.gz)",
+        default="./candidates.jsonl",
+        help="Path to candidates.jsonl (default: ./candidates.jsonl)",
     )
     parser.add_argument(
         "--out", "-o",
