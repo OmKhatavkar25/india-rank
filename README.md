@@ -11,33 +11,34 @@ Built manually for the **Senior AI Engineer — Founding Team** role at Redrob A
 pip install -r requirements.txt
 
 # Rank 100K candidates and produce submission.csv
-python rank.py --candidates ./candidates.jsonl --out ./submission.csv
+python rank.py
 
 # Validate
 python validate_submission.py submission.csv
 ```
 
-**Runtime**: ~12 seconds for 100K candidates on CPU (16 GB, 8 cores).
+**Runtime**: ~15 seconds for 100K candidates on CPU (16 GB, 8 cores).
 
 ## Architecture
 
 ```
 candidates.jsonl ──▶ loader.py ──▶ jd_features.py ──▶ jd_scoring.py ──▶ exporter.py ──▶ submission.csv
                        │               │                    │
-                 Parse JSONL      Extract features     Score & rank
-                 (100K lines)     (7 dimensions)       (top 100)
+                  Parse JSONL      Extract features     Score & rank
+                  (100K lines)     (8 dimensions)       (top 100)
 ```
 
 ### Scoring Dimensions
 
 | Dimension | Weight | What it measures |
 |-----------|--------|------------------|
-| ML/AI Experience | 30% | Has the candidate held ML/AI roles? Do they have retrieval/ranking/embedding experience? |
-| Product Company | 20% | Product company background vs consulting-only (explicitly penalized by the JD) |
-| Skill Relevance | 20% | JD-relevant skills: embeddings, vector DBs, evaluation, fine-tuning, Python, etc. |
-| Career Stability | 10% | Not a title-chaser; average tenure > 18 months |
+| ML/AI Experience | 28% | Has the candidate held ML/AI roles? Do they have retrieval/ranking/embedding experience? |
+| Product Company | 18% | Product company background vs consulting-only (explicitly penalized by the JD) |
+| Skill Relevance | 18% | JD-relevant skills: embeddings, vector DBs, evaluation, fine-tuning, Python, etc. |
+| Startup Experience | 10% | Startup/early-stage background (company size 1-50, founder titles) — Founding Team fit |
+| Career Stability | 8% | Not a title-chaser; average tenure > 18 months |
 | Experience Years | 5% | Sweet spot: 5–9 years; penalty outside range |
-| Behavioral Signals | 10% | Response rate, recency, notice period, profile views, GitHub activity |
+| Behavioral Signals | 8% | Response rate, recency, notice period, profile views, GitHub activity |
 | Education & Location | 5% | Education tier, relevant field, Pune/Noida/other Indian city |
 
 ### Key Design Decisions
@@ -59,7 +60,7 @@ candidates.jsonl ──▶ loader.py ──▶ jd_features.py ──▶ jd_scori
 Example:
 ```
 candidate_id,rank,score,reasoning
-CAND_0081846,1,0.8799,Lead AI Engineer @ Razorpay | ex: Paytm | 6.6yr ML/AI + retrieval/ranking + prod ML | Elasticsearch, Vector Search, Python | IIT Delhi | 73% response, short notice
+CAND_0045250,1,0.8255,Applied ML Engineer @ Rephrase.ai | ex: Paytm | 6.5yr ML/AI + retrieval/ranking + prod ML | Milvus, LoRA, Embeddings | Symbiosis International | 74% response, Delhi, short notice, 1x startup
 ```
 
 ## Project Structure
@@ -72,6 +73,5 @@ src/candidate_ranker/
   jd_features.py                 Feature extraction (30+ features)
   jd_scoring.py                  Scoring engine + reasoning
   exporter.py                    CSV exporter
-submission_metadata.yaml         Team info, compute, declarations
 validate_submission.py           Hackathon validation gate
 ```
