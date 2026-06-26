@@ -44,29 +44,55 @@ def _candidate_text(candidate: Candidate) -> str:
     return ". ".join(parts)
 
 
+JD_EMBEDDING_CACHE_NAME = "jd_embedding.npy"
+
+
 def precompute_embeddings(
     candidates: list[Candidate],
     cache_path: Path,
     model_name: str = "all-MiniLM-L6-v2",
 ) -> np.ndarray:
-    texts = [_candidate_text(c) for c in candidates]
-    logger.info("Loading model %s ...", model_name)
+    jd_cache_path = cache_path.parent / JD_EMBEDDING_CACHE_NAME
+
+    if cache_path.exists() and jd_cache_path.exists():
+        logger.info("Both caches already exist. Skipping precompute.")
+        return np.load(str(cache_path))
+
     model = SentenceTransformer(model_name)
-    logger.info("Encoding %d candidates ...", len(texts))
-    embeddings = model.encode(texts, show_progress_bar=True, batch_size=128)
-    np.save(str(cache_path), embeddings)
-    logger.info("Saved %d embeddings to %s", len(embeddings), cache_path)
-    return embeddings
+
+    if not cache_path.exists():
+        texts = [_candidate_text(c) for c in candidates]
+        logger.info("Encoding %d candidates ...", len(texts))
+        embeddings = model.encode(texts, show_progress_bar=True, batch_size=64)
+        np.save(str(cache_path), embeddings)
+        logger.info("Saved %d embeddings to %s", len(embeddings), cache_path)
+    else:
+        logger.info("Candidate embeddings already cached. Skipping.")
+
+    if not jd_cache_path.exists():
+        logger.info("Encoding JD text ...")
+        jd_emb = model.encode([JD_TEXT])[0]
+        np.save(str(jd_cache_path), jd_emb)
+        logger.info("Saved JD embedding to %s", jd_cache_path)
+    else:
+        logger.info("JD embedding already cached. Skipping.")
+
+    return np.load(str(cache_path)) if cache_path.exists() else None
 
 
 def _compute_from_cache(candidates, cache_path):
     logger.info("Loading embeddings from %s ...", cache_path)
     candidate_embs = np.load(str(cache_path))
 
-    logger.info("Encoding JD text (offline mode) ...")
-    os.environ["HF_HUB_OFFLINE"] = "1"
-    model = SentenceTransformer("all-MiniLM-L6-v2")
-    jd_emb = model.encode([JD_TEXT])[0]
+    jd_cache_path = cache_path.parent / JD_EMBEDDING_CACHE_NAME
+    if jd_cache_path.exists():
+        logger.info("Loading JD embedding from %s ...", jd_cache_path)
+        jd_emb = np.load(str(jd_cache_path))
+    else:
+        logger.info("Encoding JD text (offline mode) ...")
+        os.environ["HF_HUB_OFFLINE"] = "1"
+        model = SentenceTransformer("all-MiniLM-L6-v2")
+        jd_emb = model.encode([JD_TEXT])[0]
 
     norms = np.linalg.norm(candidate_embs, axis=1, keepdims=True)
     candidate_embs = candidate_embs / np.maximum(norms, 1e-12)
