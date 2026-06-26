@@ -82,14 +82,10 @@ def main() -> None:
         logger.info("Pre-computation done. Run without --precompute to rank.")
         return
 
-    semantic_scores: dict[str, float] | None = None
-    if cache_path.exists():
-        logger.info("Loading semantic embeddings from cache ...")
-        st = time.time()
-        semantic_scores = _compute_semantic_scores(candidates, cache_path)
-        logger.info("Semantic scores computed in %.1fs", time.time() - st)
-    else:
-        logger.warning("No embedding cache found at %s. Run with --precompute for semantic matching.", cache_path)
+    logger.info("Computing semantic scores ...")
+    st = time.time()
+    semantic_scores = _compute_semantic_scores(candidates, cache_path)
+    logger.info("Semantic scores computed in %.1fs", time.time() - st)
 
     logger.info("Extracting features and scoring ...")
     scored = []
@@ -97,10 +93,7 @@ def main() -> None:
         if (idx + 1) % 25000 == 0:
             logger.info("  Processed %d / %d", idx + 1, len(candidates))
         features = extract_features(cand)
-        if semantic_scores is not None:
-            features["semantic_score"] = semantic_scores.get(cand.candidate_id, 0.0)
-        else:
-            features["semantic_score"] = 0.0
+        features["semantic_score"] = semantic_scores.get(cand.candidate_id, 0.0)
         score = score_candidate(features)
         scored.append((score, cand.candidate_id, features, cand))
     t2 = time.time()

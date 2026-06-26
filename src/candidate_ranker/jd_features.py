@@ -56,6 +56,7 @@ PRODUCT_COMPANY_INDUSTRIES = frozenset({
     "software", "internet", "saas", "technology", "fintech",
     "healthtech", "edtech", "e-commerce", "marketplace",
     "social media", "gaming", "transportation", "conglomerate",
+    "semiconductor", "hardware", "electronics",
 })
 
 
@@ -101,13 +102,21 @@ def _extract_role_keywords(candidate: Candidate) -> dict:
         if is_ml:
             ml_title_count += 1
             total_relevant_months += entry.duration_months
+        elif re.search(
+            r"machine learning|deep learning|nlp|recommendation|ranking|retrieval|"
+            r"embedding|vector search|fine.tuning|llm|rag|"
+            r"production.*(model|ml|ai)|deploy.*(model|ml|ai)|"
+            r"trained.*(model|algorithm)|built.*(model|recommendation|ranking|search)",
+            desc_lower,
+        ):
+            total_relevant_months += entry.duration_months
 
         if re.search(r"production|deploy|shipped|launched|live|prod", desc_lower):
-            has_production_ml = has_production_ml or is_ml
+            has_production_ml = True
 
         if re.search(r"embedding|retrieval|ranking|vector|search|recommendation|ndcg|mrr|map|relevance",
                      desc_lower):
-            has_retrieval_exp = has_retrieval_exp or is_ml
+            has_retrieval_exp = True
 
         if entry.duration_months > 0:
             tenures.append(entry.duration_months)

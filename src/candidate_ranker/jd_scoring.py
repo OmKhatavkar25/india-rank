@@ -21,50 +21,50 @@ def score_candidate(features: dict) -> float:
     s = 0.0
     debug = {}
 
-    # 1. ML/AI Engineering Experience (weight: 0.25)
+    # 1. Semantic JD-Candidate Similarity (weight: 0.25)
+    semantic_score = _score_semantic(features)
+    s += semantic_score * 0.25
+    debug["semantic"] = round(semantic_score, 4)
+
+    # 2. ML/AI Engineering Experience (weight: 0.18)
     ml_score = _score_ml_experience(features)
-    s += ml_score * 0.25
+    s += ml_score * 0.18
     debug["ml_experience"] = round(ml_score, 4)
 
-    # 2. Product Company Experience (weight: 0.15)
-    product_score = _score_product_experience(features)
-    s += product_score * 0.15
-    debug["product_experience"] = round(product_score, 4)
-
-    # 3. Skill Relevance (weight: 0.15)
+    # 3. Skill Relevance (weight: 0.12)
     skill_score = _score_skills(features)
-    s += skill_score * 0.15
+    s += skill_score * 0.12
     debug["skills"] = round(skill_score, 4)
 
-    # 4. Startup / Founding-Team Experience (weight: 0.10)
+    # 4. Product Company Experience (weight: 0.10)
+    product_score = _score_product_experience(features)
+    s += product_score * 0.10
+    debug["product_experience"] = round(product_score, 4)
+
+    # 5. Startup / Founding-Team Experience (weight: 0.10)
     startup_score = _score_startup_experience(features)
     s += startup_score * 0.10
     debug["startup"] = round(startup_score, 4)
 
-    # 5. Semantic JD-Candidate Similarity (weight: 0.10)
-    semantic_score = _score_semantic(features)
-    s += semantic_score * 0.10
-    debug["semantic"] = round(semantic_score, 4)
-
-    # 6. Career Stability & Trajectory (weight: 0.07)
-    stability_score = _score_stability(features)
-    s += stability_score * 0.07
-    debug["stability"] = round(stability_score, 4)
-
-    # 7. Experience Alignment (weight: 0.05)
-    exp_years_score = _score_experience_years(features)
-    s += exp_years_score * 0.05
-    debug["exp_years"] = round(exp_years_score, 4)
-
-    # 8. Behavioral Signals (weight: 0.08)
+    # 6. Behavioral Signals (weight: 0.10)
     behavioral_score = _score_behavioral(features)
-    s += behavioral_score * 0.08
+    s += behavioral_score * 0.10
     debug["behavioral"] = round(behavioral_score, 4)
 
-    # 9. Education & Location (weight: 0.05)
+    # 7. Career Stability & Trajectory (weight: 0.06)
+    stability_score = _score_stability(features)
+    s += stability_score * 0.06
+    debug["stability"] = round(stability_score, 4)
+
+    # 8. Education & Location (weight: 0.05)
     edu_loc_score = _score_education_location(features)
     s += edu_loc_score * 0.05
     debug["edu_location"] = round(edu_loc_score, 4)
+
+    # 9. Experience Alignment (weight: 0.04)
+    exp_years_score = _score_experience_years(features)
+    s += exp_years_score * 0.04
+    debug["exp_years"] = round(exp_years_score, 4)
 
     # Penalties
     honeypot_penalty = features.get("honeypot_penalty", 0.0)
@@ -190,6 +190,7 @@ def _score_stability(f: dict) -> float:
     shortest = f.get("shortest_tenure_months", float("inf"))
     job_hop_count = f.get("job_hop_count", 0)
     total_roles = f.get("total_roles", 0)
+    years_exp = f.get("years_exp", 0)
 
     if total_roles <= 1:
         return 0.5
@@ -197,12 +198,12 @@ def _score_stability(f: dict) -> float:
     tenure_score = min(avg_tenure / 36.0, 1.0) * 0.50
 
     hopping_penalty = 0.0
-    if total_roles > 0:
+    if total_roles > 0 and years_exp >= 3:
         hop_ratio = job_hop_count / total_roles
         hopping_penalty = min(hop_ratio, 1.0) * 0.30
 
     short_tenure_penalty = 0.0
-    if shortest < 6:
+    if shortest < 6 and years_exp >= 3:
         short_tenure_penalty = 0.20
 
     return max(0.0, 0.5 + tenure_score - hopping_penalty - short_tenure_penalty)
@@ -286,7 +287,10 @@ def _score_education_location(f: dict) -> float:
     score = 0.0
 
     edu_tier = f.get("education_tier_score", 0.2)
-    score += edu_tier * 0.30
+    # If tier is unknown (0.2) and no education entries, give a neutral 0.5
+    # instead of penalizing self-taught engineers.
+    effective_tier = edu_tier if edu_tier > 0.25 else 0.5
+    score += effective_tier * 0.30
 
     has_relevant_field = f.get("has_relevant_field", 0)
     score += has_relevant_field * 0.20

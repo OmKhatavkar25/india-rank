@@ -27,10 +27,20 @@ def _candidate_text(candidate: Candidate) -> str:
     if candidate.profile.headline:
         parts.append(candidate.profile.headline)
     if candidate.profile.summary:
-        parts.append(candidate.profile.summary[:800])
+        parts.append(candidate.profile.summary)
     if candidate.skills:
-        names = [s.name for s in candidate.skills[:30]]
+        names = [s.name for s in candidate.skills[:50]]
         parts.append(f"Skills: {', '.join(names)}")
+    # Include up to 5 most-recent career descriptions — catches ML work
+    # at companies where the title isn't ML-tagged.
+    descs = []
+    for entry in candidate.career_history:
+        if entry.description and len(entry.description) > 15:
+            descs.append(entry.description)
+        if len(descs) >= 5:
+            break
+    if descs:
+        parts.append("Experience: " + " | ".join(descs))
     return ". ".join(parts)
 
 
@@ -49,10 +59,7 @@ def precompute_embeddings(
     return embeddings
 
 
-def compute_semantic_scores(
-    candidates: list[Candidate],
-    cache_path: Path,
-) -> dict[str, float]:
+def _compute_from_cache(candidates, cache_path):
     logger.info("Loading embeddings from %s ...", cache_path)
     candidate_embs = np.load(str(cache_path))
 
@@ -66,7 +73,34 @@ def compute_semantic_scores(
     jd_norm = np.linalg.norm(jd_emb)
     jd_emb = jd_emb / max(jd_norm, 1e-12)
 
-    similarities = candidate_embs @ jd_emb
+    return candidate_embs @ jd_emb
+
+
+def _compute_tfidf_scores(candidates):
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.metrics.pairwise import cosine_similarity
+
+    texts = [_candidate_text(c) for c in candidates]
+    all_texts = [JD_TEXT] + texts
+    logger.info("Computing TF-IDF similarity for %d candidates ...", len(texts))
+    vectorizer = TfidfVectorizer(stop_words="english", max_features=10000, ngram_range=(1, 2))
+    tfidf_matrix = vectorizer.fit_transform(all_texts)
+    jd_vec = tfidf_matrix[0:1]
+    candidate_vecs = tfidf_matrix[1:]
+    similarities = cosine_similarity(jd_vec, candidate_vecs).flatten()
+    return similarities
+
+
+def compute_semantic_scores(
+    candidates: list[Candidate],
+    cache_path: Path,
+) -> dict[str, float]:
+    if cache_path.exists():
+        similarities = _compute_from_cache(candidates, cache_path)
+    else:
+        logger.warning("No embedding cache found. Using TF-IDF fallback.")
+        logger.warning("Run `python rank.py --precompute` once for better semantic matching.")
+        similarities = _compute_tfidf_scores(candidates)
 
     min_sim, max_sim = float(similarities.min()), float(similarities.max())
     if max_sim > min_sim:
