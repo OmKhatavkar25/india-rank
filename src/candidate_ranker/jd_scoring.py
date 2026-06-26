@@ -21,19 +21,19 @@ def score_candidate(features: dict) -> float:
     s = 0.0
     debug = {}
 
-    # 1. ML/AI Engineering Experience (weight: 0.28)
+    # 1. ML/AI Engineering Experience (weight: 0.25)
     ml_score = _score_ml_experience(features)
-    s += ml_score * 0.28
+    s += ml_score * 0.25
     debug["ml_experience"] = round(ml_score, 4)
 
-    # 2. Product Company Experience (weight: 0.18)
+    # 2. Product Company Experience (weight: 0.15)
     product_score = _score_product_experience(features)
-    s += product_score * 0.18
+    s += product_score * 0.15
     debug["product_experience"] = round(product_score, 4)
 
-    # 3. Skill Relevance (weight: 0.18)
+    # 3. Skill Relevance (weight: 0.15)
     skill_score = _score_skills(features)
-    s += skill_score * 0.18
+    s += skill_score * 0.15
     debug["skills"] = round(skill_score, 4)
 
     # 4. Startup / Founding-Team Experience (weight: 0.10)
@@ -41,22 +41,27 @@ def score_candidate(features: dict) -> float:
     s += startup_score * 0.10
     debug["startup"] = round(startup_score, 4)
 
-    # 5. Career Stability & Trajectory (weight: 0.08)
+    # 5. Semantic JD-Candidate Similarity (weight: 0.10)
+    semantic_score = _score_semantic(features)
+    s += semantic_score * 0.10
+    debug["semantic"] = round(semantic_score, 4)
+
+    # 6. Career Stability & Trajectory (weight: 0.07)
     stability_score = _score_stability(features)
-    s += stability_score * 0.08
+    s += stability_score * 0.07
     debug["stability"] = round(stability_score, 4)
 
-    # 6. Experience Alignment (weight: 0.05)
+    # 7. Experience Alignment (weight: 0.05)
     exp_years_score = _score_experience_years(features)
     s += exp_years_score * 0.05
     debug["exp_years"] = round(exp_years_score, 4)
 
-    # 7. Behavioral Signals (weight: 0.08)
+    # 8. Behavioral Signals (weight: 0.08)
     behavioral_score = _score_behavioral(features)
     s += behavioral_score * 0.08
     debug["behavioral"] = round(behavioral_score, 4)
 
-    # 8. Education & Location (weight: 0.05)
+    # 9. Education & Location (weight: 0.05)
     edu_loc_score = _score_education_location(features)
     s += edu_loc_score * 0.05
     debug["edu_location"] = round(edu_loc_score, 4)
@@ -146,6 +151,10 @@ def _score_startup_experience(f: dict) -> float:
         score += 0.05
 
     return min(score, 1.0)
+
+
+def _score_semantic(f: dict) -> float:
+    return min(f.get("semantic_score", 0.0), 1.0)
 
 
 def _score_skills(f: dict) -> float:

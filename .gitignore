@@ -23,3 +23,5 @@ candidates.jsonl
 submission_deck.pptx
 ~$*
 test.csv
+
+candidate_embeddings.npy

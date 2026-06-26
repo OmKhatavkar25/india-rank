@@ -2,7 +2,9 @@
 """Redrob Hackathon — Candidate Ranker for Senior AI Engineer role.
 
 Usage:
-    python rank.py --candidates ./candidates.jsonl --out ./submission.csv
+    python rank.py                         # default: ./candidates.jsonl -> ./submission.csv
+    python rank.py --precompute            # pre-compute semantic embeddings (one-time)
+    python rank.py -c sample_candidates.jsonl -o submission.csv
 """
 
 from __future__ import annotations
@@ -26,6 +28,18 @@ logging.basicConfig(
 )
 logger = logging.getLogger("rank")
 
+EMBEDDING_CACHE = Path("./candidate_embeddings.npy")
+
+
+def _compute_semantic_scores(candidates, cache_path: Path) -> dict:
+    from candidate_ranker.semantic import compute_semantic_scores
+    return compute_semantic_scores(candidates, cache_path)
+
+
+def _precompute(candidates, cache_path: Path) -> None:
+    from candidate_ranker.semantic import precompute_embeddings
+    precompute_embeddings(candidates, cache_path)
+
 
 def main() -> None:
     parser = argparse.ArgumentParser(
@@ -47,6 +61,11 @@ def main() -> None:
         default=100,
         help="Number of top candidates (default: 100)",
     )
+    parser.add_argument(
+        "--precompute",
+        action="store_true",
+        help="Pre-compute semantic embeddings and cache them (one-time, requires network)",
+    )
     args = parser.parse_args()
 
     t0 = time.time()
@@ -56,18 +75,37 @@ def main() -> None:
     t1 = time.time()
     logger.info("Loaded %d candidates in %.1fs", len(candidates), t1 - t0)
 
+    cache_path = args.out.parent / "candidate_embeddings.npy" if args.out != "./submission.csv" else EMBEDDING_CACHE
+
+    if args.precompute:
+        _precompute(candidates, cache_path)
+        logger.info("Pre-computation done. Run without --precompute to rank.")
+        return
+
+    semantic_scores: dict[str, float] | None = None
+    if cache_path.exists():
+        logger.info("Loading semantic embeddings from cache ...")
+        st = time.time()
+        semantic_scores = _compute_semantic_scores(candidates, cache_path)
+        logger.info("Semantic scores computed in %.1fs", time.time() - st)
+    else:
+        logger.warning("No embedding cache found at %s. Run with --precompute for semantic matching.", cache_path)
+
     logger.info("Extracting features and scoring ...")
     scored = []
     for idx, cand in enumerate(candidates):
         if (idx + 1) % 25000 == 0:
             logger.info("  Processed %d / %d", idx + 1, len(candidates))
         features = extract_features(cand)
+        if semantic_scores is not None:
+            features["semantic_score"] = semantic_scores.get(cand.candidate_id, 0.0)
+        else:
+            features["semantic_score"] = 0.0
         score = score_candidate(features)
         scored.append((score, cand.candidate_id, features, cand))
     t2 = time.time()
     logger.info("Scored %d candidates in %.1fs", len(scored), t2 - t1)
 
-    # Sort: descending score, then ascending candidate_id (tie-break)
     scored.sort(key=lambda x: (-x[0], x[1]))
 
     top_n = min(args.top_n, len(scored))
@@ -83,7 +121,6 @@ def main() -> None:
             "reasoning": reasoning,
         })
 
-    # Ensure non-increasing scores; stable tie-break by candidate_id ascending
     ranked.sort(key=lambda x: (-x["score"], x["candidate_id"]))
     for i, row in enumerate(ranked):
         row["rank"] = i + 1
