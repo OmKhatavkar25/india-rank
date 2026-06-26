@@ -10,6 +10,12 @@ Built manually for the **Senior AI Engineer — Founding Team** role at Redrob A
 # Install dependencies
 pip install -r requirements.txt
 
+# Install dependencies
+pip install -r requirements.txt
+
+# Pre-compute semantic embeddings (one-time, requires network, ~25 min on CPU)
+python rank.py --precompute
+
 # Rank 100K candidates and produce submission.csv
 python rank.py
 
@@ -17,15 +23,18 @@ python rank.py
 python validate_submission.py submission.csv
 ```
 
-**Runtime**: ~15 seconds for 100K candidates on CPU (16 GB, 8 cores).
+**Runtime**: ~13s for rule-based scoring (100K). Add ~5s for semantic matching if cache exists. Total with cache: ~25s.
 
 ## Architecture
 
 ```
 candidates.jsonl ──▶ loader.py ──▶ jd_features.py ──▶ jd_scoring.py ──▶ exporter.py ──▶ submission.csv
                        │               │                    │
-                  Parse JSONL      Extract features     Score & rank
-                  (100K lines)     (8 dimensions)       (top 100)
+                   Parse JSONL      Extract features     Score & rank
+                  (100K lines)     (9 dimensions)       (top 100)
+                                    semantic.py ────────▶ (JD-candidate
+                                    (sentence            cosine similarity)
+                                     transformer)
 ```
 
 ### Scoring Dimensions
@@ -36,7 +45,8 @@ candidates.jsonl ──▶ loader.py ──▶ jd_features.py ──▶ jd_scori
 | Product Company | 18% | Product company background vs consulting-only (explicitly penalized by the JD) |
 | Skill Relevance | 18% | JD-relevant skills: embeddings, vector DBs, evaluation, fine-tuning, Python, etc. |
 | Startup Experience | 10% | Startup/early-stage background (company size 1-50, founder titles) — Founding Team fit |
-| Career Stability | 8% | Not a title-chaser; average tenure > 18 months |
+| Semantic Matching | 10% | Cosine similarity between JD and candidate profile via Sentence Transformer (all-MiniLM-L6-v2) |
+| Career Stability | 7% | Not a title-chaser; average tenure > 18 months |
 | Experience Years | 5% | Sweet spot: 5–9 years; penalty outside range |
 | Behavioral Signals | 8% | Response rate, recency, notice period, profile views, GitHub activity |
 | Education & Location | 5% | Education tier, relevant field, Pune/Noida/other Indian city |
@@ -45,13 +55,15 @@ candidates.jsonl ──▶ loader.py ──▶ jd_features.py ──▶ jd_scori
 
 1. **No simple keyword counting.** The JD explicitly warns: *"The right answer is not 'find candidates whose skills section contains the most AI keywords.'"* The ranker evaluates career history for actual production ML/AI roles at product companies.
 
-2. **Retrieval/ranking experience detection.** Role descriptions are scanned for evidence of deployed ranking, retrieval, search, or recommendation systems — the core of what Redrob's Senior AI Engineer would build.
+2. **Semantic JD-candidate matching.** A Sentence Transformer (all-MiniLM-L6-v2) encodes the JD and each candidate's profile summary + headline + skills into 384-dim vectors. Cosine similarity measures true semantic alignment — e.g., "recommendation system" matches "ranking engine" even when keywords differ.
 
-3. **Consulting penalty.** Candidates whose entire career is at services firms (TCS, Infosys, Wipro, Accenture, etc.) are down-weighted per the JD's explicit disqualifier.
+3. **Retrieval/ranking experience detection.** Role descriptions are scanned for evidence of deployed ranking, retrieval, search, or recommendation systems — the core of what Redrob's Senior AI Engineer would build.
 
-4. **Honeypot resistance.** Skills with "expert" proficiency but <6 months duration, or 20+ skills with <6 months average duration, are flagged and penalized.
+4. **Consulting penalty.** Candidates whose entire career is at services firms (TCS, Infosys, Wipro, Accenture, etc.) are down-weighted per the JD's explicit disqualifier.
 
-5. **Behavioral modifier.** A perfect-on-paper candidate with low response rate, long inactivity, or long notice period is down-weighted.
+5. **Honeypot resistance.** Skills with "expert" proficiency but <6 months duration, or 20+ skills with <6 months average duration, are flagged and penalized.
+
+6. **Behavioral modifier.** A perfect-on-paper candidate with low response rate, long inactivity, or long notice period is down-weighted.
 
 ## Output Format
 
