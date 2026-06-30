@@ -15,7 +15,7 @@ def load_candidates(path: str | Path) -> list[Candidate]:
     open_func = gzip.open if path.suffix == ".gz" else open
     candidates: list[Candidate] = []
 
-    with open_func(path, "rt", encoding="utf-8") as f:
+    with open_func(path, "rt", encoding="utf-8-sig") as f:
         first_char = f.read(1)
         f.seek(0)
 
