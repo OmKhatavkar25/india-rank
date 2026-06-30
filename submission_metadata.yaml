@@ -1,0 +1,92 @@
+# Redrob Hackathon — Submission Metadata
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "Hello"
+
+primary_contact:
+  name: "Om Khatavkar"
+  email: "omkhatavkar25@gmail.com"
+  phone: ""
+
+team_members:
+  - name: "Om Khatavkar"
+    email: "omkhatavkar25@gmail.com"
+    role: "Team Lead"
+  - name: "Aryan Nehe"
+    email: "aryannnehe@gmail.com"
+    role: "ML Engineer"
+  - name: "Shravani Itkar"
+    email: "shravaniitkar184@gmail.com"
+    role: "Data Engineer"
+  - name: "Gayatri Salunkhe"
+    email: "gayatrisalunke2005@gmail.com"
+    role: "Data Engineer"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/OmKhatavkar25/india-rank"
+
+sandbox_link: "https://colab.research.google.com/github/OmKhatavkar25/india-rank/blob/main/india_runs_sandbox.ipynb"
+
+reproduce_command: "python rank.py --candidates ./candidates.jsonl --out ./submission.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Local Windows Laptop"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.11.4"
+  os: "Windows 11"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: true
+  pre_computation_time_minutes: 34
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Claude (opencode)"
+
+ai_usage_summary: |
+  Used Claude (via opencode CLI agent) for end-to-end code generation,
+  architecture design, debugging, and refactoring of the entire ranking
+  pipeline. No candidate data was sent to any external LLM during pipeline
+  execution — all model inference runs locally on CPU.
+
+# ============================================================================
+# Approach summary
+# ============================================================================
+methodology_summary: |
+  Hybrid ranking system combining rule-based feature extraction with
+  semantic similarity scoring. Nine dimensions are evaluated per candidate:
+  semantic JD-candidate matching (25%), ML/AI experience (18%), skill
+  relevance (12%), product company background (10%), startup/founding-team
+  experience (10%), behavioral signals (10%), career stability (6%),
+  education and location (5%), and experience years (4%).
+
+  Candidate profiles are encoded via sentence-transformers (all-MiniLM-L6-v2)
+  into 384-dim vectors and compared against the JD via cosine similarity.
+  A TF-IDF fallback always runs when cached embeddings are unavailable,
+  ensuring semantic scores are never zero. Career descriptions are included
+  in the candidate text to catch engineers whose titles don't reflect their
+  ML work — 53% of ML-relevant candidates are detected this way. Feature
+  extraction scans role descriptions for production ML and retrieval/ranking
+  evidence independently of title. Honeypot detection flags inflated skills.
+  Education absence is treated neutrally. Job-hopping is only penalized
+  after 3+ years experience. Pre-computed embeddings reduce ranking runtime
+  to ~36 seconds with zero network access.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true
+  code_is_original_work: true
+  no_collusion: true
+  honeypot_check_done: true
+  reproduction_tested: true
