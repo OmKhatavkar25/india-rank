@@ -75,7 +75,7 @@ def main() -> None:
     t1 = time.time()
     logger.info("Loaded %d candidates in %.1fs", len(candidates), t1 - t0)
 
-    cache_path = args.out.parent / "candidate_embeddings.npy" if args.out != "./submission.csv" else EMBEDDING_CACHE
+    cache_path = Path(args.out).parent / "candidate_embeddings.npy" if args.out != "./submission.csv" else EMBEDDING_CACHE
 
     if args.precompute:
         _precompute(candidates, cache_path)
